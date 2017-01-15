@@ -3,6 +3,39 @@
 
 
     
+  <url>
+    <loc>http://yoursite.com/2017/01/15/WhyWriteBlog/</loc>
+    <lastmod>2017-01-15T04:59:16.496Z</lastmod>
+    <data>
+        <display>
+        <title>为啥要整博客这玩意了呢？</title>
+        <pubTime>2017-01-15T03:34:00.000Z</pubTime>
+        
+        <tag>开始</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    <lastmod>2017-01-15T04:44:52.916Z</lastmod>
+    <data>
+        <display>
+        <title>分类&标签</title>
+        <pubTime>2017-01-14T10:42:35.000Z</pubTime>
+        
+         
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://yoursite.com/2017/01/13/hello-world/</loc>

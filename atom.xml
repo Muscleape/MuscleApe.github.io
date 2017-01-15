@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-15T03:52:41.481Z</updated>
+  <updated>2017-01-15T04:59:16.496Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为啥要整博客这玩意了呢？</title>
+    <link href="http://yoursite.com/2017/01/15/WhyWriteBlog/"/>
+    <id>http://yoursite.com/2017/01/15/WhyWriteBlog/</id>
+    <published>2017-01-15T03:34:00.000Z</published>
+    <updated>2017-01-15T04:59:16.496Z</updated>
+    
+    <content type="html"><![CDATA[<p><excert in="" index="" |="" 主页摘要=""></excert></p>
+<blockquote>
+<p>为嘛呢？这是为嘛呢？琢磨琢磨！</p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>这里引用一篇文章 <a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat" title="为什么你要写博客" target="_blank" rel="external">《为什么你要写博客》</a></the></li>
+</ul>
+</blockquote>
+<h3 id="也就是这么点爱好了，没事喜欢找点新鲜东西来折腾折腾，Hexo-GitHub不错的样子，想玩。"><a href="#也就是这么点爱好了，没事喜欢找点新鲜东西来折腾折腾，Hexo-GitHub不错的样子，想玩。" class="headerlink" title="也就是这么点爱好了，没事喜欢找点新鲜东西来折腾折腾，Hexo+GitHub不错的样子，想玩。"></a>也就是这么点爱好了，没事喜欢找点新鲜东西来折腾折腾，Hexo+GitHub不错的样子，想玩。</h3><h3 id="我嘛，开始在玩Linux，帮同学处理了点问题，发现有必要把整理在笔记中的东西拿出来共享一下了。"><a href="#我嘛，开始在玩Linux，帮同学处理了点问题，发现有必要把整理在笔记中的东西拿出来共享一下了。" class="headerlink" title="我嘛，开始在玩Linux，帮同学处理了点问题，发现有必要把整理在笔记中的东西拿出来共享一下了。"></a>我嘛，开始在玩Linux，帮同学处理了点问题，发现有必要把整理在笔记中的东西拿出来共享一下了。</h3><h3 id="而且以后再看自己的笔记就不用安装笔记APP了，有个浏览器就搞定了噻！"><a href="#而且以后再看自己的笔记就不用安装笔记APP了，有个浏览器就搞定了噻！" class="headerlink" title="而且以后再看自己的笔记就不用安装笔记APP了，有个浏览器就搞定了噻！"></a>而且以后再看自己的笔记就不用安装笔记APP了，有个浏览器就搞定了噻！</h3><h3 id="还有还有就是一直对MarkDown感兴趣，但是找不到可以练习的场景，这里也可以顺便学着用了嘛！"><a href="#还有还有就是一直对MarkDown感兴趣，但是找不到可以练习的场景，这里也可以顺便学着用了嘛！" class="headerlink" title="还有还有就是一直对MarkDown感兴趣，但是找不到可以练习的场景，这里也可以顺便学着用了嘛！"></a>还有还有就是一直对MarkDown感兴趣，但是找不到可以练习的场景，这里也可以顺便学着用了嘛！</h3><blockquote>
+<p>再有嘛，也是终极目的，就是……( ͡° ͜ʖ ͡°)</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excert in index | 主页摘要&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为嘛呢？这是为嘛呢？琢磨琢磨！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="http://yoursite.com/categories/other/"/>
+    
+    
+      <category term="开始" scheme="http://yoursite.com/tags/%E5%BC%80%E5%A7%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
