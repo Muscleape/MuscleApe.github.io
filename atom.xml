@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-15T04:21:29.261Z</updated>
+  <updated>2017-01-15T04:23:04.991Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,15 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>为嘛要整博客这玩意了呢？</title>
+    <title>为啥要整博客这玩意了呢？</title>
     <link href="http://yoursite.com/2017/01/15/WhyWriteBlog/"/>
     <id>http://yoursite.com/2017/01/15/WhyWriteBlog/</id>
     <published>2017-01-15T03:34:00.000Z</published>
-    <updated>2017-01-15T04:21:29.261Z</updated>
+    <updated>2017-01-15T04:23:04.991Z</updated>
     
     <content type="html"><![CDATA[<p><excert in="" index="" |="" 主页摘要=""></excert></p>
 <blockquote>
-<p>为嘛呢？这是一个十分沉重的话题！</p>
+<p>为嘛呢？这是为嘛呢？琢磨琢磨！</p>
 <ul>
 <li><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文=""><br>这里引用一篇文章 <a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat" title="为什么你要写博客" target="_blank" rel="external">《为什么你要写博客》</a></the></li>
@@ -39,7 +39,7 @@
     
       &lt;p&gt;&lt;Excert in index | 主页摘要&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;为嘛呢？这是一个十分沉重的话题！&lt;/p&gt;
+&lt;p&gt;为嘛呢？这是为嘛呢？琢磨琢磨！&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
     
