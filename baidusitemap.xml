@@ -4,8 +4,23 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/01/13/hello-world/</loc>
+    <lastmod>2017-01-15T03:52:41.481Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-01-13T12:23:49.978Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/01/15/WhyWriteBlog/</loc>
-    <lastmod>2017-01-15T03:50:42.561Z</lastmod>
+    <lastmod>2017-01-15T03:52:36.438Z</lastmod>
     <data>
         <display>
         <title>Why Write Blog</title>
@@ -21,19 +36,4 @@
     
     
     
-    
-  <url>
-    <loc>http://yoursite.com/2017/01/13/hello-world/</loc>
-    <lastmod>2017-01-13T12:23:49.979Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-01-13T12:23:49.978Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
