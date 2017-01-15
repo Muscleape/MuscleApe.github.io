@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>http://yoursite.com/2017/01/15/WhyWriteBlog/</loc>
     <lastmod>2017-01-15T04:59:16.496Z</lastmod>
@@ -18,20 +19,6 @@
              
               <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    <lastmod>2017-01-15T04:44:52.916Z</lastmod>
-    <data>
-        <display>
-        <title>分类&标签</title>
-        <pubTime>2017-01-14T10:42:35.000Z</pubTime>
-        
-         
         </display>
     </data>
     </url>
