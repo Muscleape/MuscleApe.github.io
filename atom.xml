@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-15T03:36:32.955Z</updated>
+  <updated>2017-01-15T03:38:12.496Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,16 +20,17 @@
     <link href="http://yoursite.com/2017/01/15/WhyWriteBlog/"/>
     <id>http://yoursite.com/2017/01/15/WhyWriteBlog/</id>
     <published>2017-01-15T03:34:00.000Z</published>
-    <updated>2017-01-15T03:36:32.955Z</updated>
+    <updated>2017-01-15T03:38:12.496Z</updated>
     
-    <content type="html"><![CDATA[<p><excert in="" index="" |="" 摘要=""><br><a id="more"></a></excert></p>
-<h2 id="这里是摘要"><a href="#这里是摘要" class="headerlink" title="这里是摘要"></a>这里是摘要</h2><h2 id="关于为什么要开始整理博客"><a href="#关于为什么要开始整理博客" class="headerlink" title="关于为什么要开始整理博客"></a>关于为什么要开始整理博客</h2><blockquote>
+    <content type="html"><![CDATA[<p><excert in="" index="" |="" 主页摘要=""><br><a id="more"></a><br> 这里是摘要</excert></p>
+<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
+<h2 id="关于为什么要开始整理博客"><a href="#关于为什么要开始整理博客" class="headerlink" title="关于为什么要开始整理博客"></a>关于为什么要开始整理博客</h2><blockquote>
 <h4 id="《为什么你要写博客》"><a href="#《为什么你要写博客》" class="headerlink" title="《为什么你要写博客》"></a><a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat" title="为什么你要写博客" target="_blank" rel="external">《为什么你要写博客》</a></h4><h3 id="整理、记录、分享"><a href="#整理、记录、分享" class="headerlink" title="整理、记录、分享"></a>整理、记录、分享</h3></blockquote>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;Excert in index | 摘要&gt;&lt;br&gt;
+      &lt;p&gt;&lt;Excert in index | 主页摘要&gt;&lt;br&gt;
     
     </summary>
     
