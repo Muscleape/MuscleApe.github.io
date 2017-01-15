@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-15T03:31:41.912Z</updated>
+  <updated>2017-01-15T03:36:32.955Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,20 +16,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Why Write Blog</title>
     <link href="http://yoursite.com/2017/01/15/WhyWriteBlog/"/>
     <id>http://yoursite.com/2017/01/15/WhyWriteBlog/</id>
-    <published>2017-01-15T03:21:56.622Z</published>
-    <updated>2017-01-15T03:31:41.912Z</updated>
+    <published>2017-01-15T03:34:00.000Z</published>
+    <updated>2017-01-15T03:36:32.955Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="关于为什么要开始整理博客"><a href="#关于为什么要开始整理博客" class="headerlink" title="关于为什么要开始整理博客"></a>关于为什么要开始整理博客</h2><blockquote>
+    <content type="html"><![CDATA[<p><excert in="" index="" |="" 摘要=""><br><a id="more"></a></excert></p>
+<h2 id="这里是摘要"><a href="#这里是摘要" class="headerlink" title="这里是摘要"></a>这里是摘要</h2><h2 id="关于为什么要开始整理博客"><a href="#关于为什么要开始整理博客" class="headerlink" title="关于为什么要开始整理博客"></a>关于为什么要开始整理博客</h2><blockquote>
 <h4 id="《为什么你要写博客》"><a href="#《为什么你要写博客》" class="headerlink" title="《为什么你要写博客》"></a><a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat" title="为什么你要写博客" target="_blank" rel="external">《为什么你要写博客》</a></h4><h3 id="整理、记录、分享"><a href="#整理、记录、分享" class="headerlink" title="整理、记录、分享"></a>整理、记录、分享</h3></blockquote>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;关于为什么要开始整理博客&quot;&gt;&lt;a href=&quot;#关于为什么要开始整理博客&quot; class=&quot;headerlink&quot; title=&quot;关于为什么要开始整理博客&quot;&gt;&lt;/a&gt;关于为什么要开始整理博客&lt;/h2&gt;&lt;blockquote&gt;
-&lt;h4 id=&quot;《为什么你要写博客》&quot;&gt;
+      &lt;p&gt;&lt;Excert in index | 摘要&gt;&lt;br&gt;
     
     </summary>
     
