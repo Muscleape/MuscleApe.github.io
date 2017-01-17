@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/17/Linux-Directory/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Linux系统常用目录结构">
-<meta property="og:updated_time" content="2017-01-17T14:36:16.319Z">
+<meta property="og:updated_time" content="2017-01-17T14:38:41.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用目录结构">
 <meta name="twitter:description" content="Linux系统常用目录结构">
@@ -319,22 +319,13 @@
 <h3 id="root"><a href="#root" class="headerlink" title="/root"></a>/root</h3><p>超级管理员用户的主目录。</p>
 <h3 id="selinux"><a href="#selinux" class="headerlink" title="/selinux"></a>/selinux</h3><p>这个目录是RedHat/CentOS所特有的目录，SeLinux是一种安全机制，较复杂。该目录用于存放SeLinux相关的文件。<br><strong> 一般我们在安装操作系统的时候都禁用SeLinux </strong></p>
 <h3 id="sys"><a href="#sys" class="headerlink" title="/sys"></a>/sys</h3><p>这个是Linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的文件系统sysfs,sysfs文件系统集成了下面3中文件系统的信息。该文件系统是内核设备树的一个直观反映。当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建。</p>
-</blockquote>
-</the></li>
-</ul>
 <ul>
 <li>针对进程信息的proc文件系统</li>
 <li>针对设备的devfs文件系统</li>
-<li>针对伪终端的devpts文件系统<h3 id="usr"><a href="#usr" class="headerlink" title="/usr"></a>/usr</h3>包括与系统用户直接有关的文件和目录，例如医用程序及支持它们的库文件。类似于windows下的program files目录。<h3 id="boot"><a href="#boot" class="headerlink" title="/boot"></a>/boot</h3>包括内核和其它系统启动期间使用的文件。是启动Linux时使用的核心文件，有链接文件和镜像文件。<h3 id="etc"><a href="#etc" class="headerlink" title="/etc"></a>/etc</h3>存放系统配置文件和目录<br><strong> （注意：经常使用该目录） </strong><h3 id="lost-found"><a href="#lost-found" class="headerlink" title="/lost+found"></a>/lost+found</h3>默认为空，被FSCK用来放置零散文件（没有名称的文件）。当系统非法关机后，这里就会存放一些文件。<blockquote>
-<p>FSCK(file system check)用来检查和维护不一致的文件系统。若系统掉电或磁盘发生问题，可以利用fsck命令对文件系统进行检查。</p>
-<h3 id="misc"><a href="#misc" class="headerlink" title="/misc"></a>/misc</h3><p>存放杂项文件或目录，即那些用途或含义不明确的文件或目录可以存放在该目录下。</p>
-<h3 id="proc"><a href="#proc" class="headerlink" title="proc"></a>proc</h3><p>操作系统运行时，进程（正在运行中的程序）信息及内核信息（如：CPU、硬盘分区、内存信息等）存放在这里。/proc目录是伪装的文件系统proc的挂载目录，proc并不是真正的文件系统。因此这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。也就是说， <strong> 这个目录的内容不在磁盘上而是在内存里。 </strong></p>
-<h3 id="sbin"><a href="#sbin" class="headerlink" title="/sbin"></a>/sbin</h3><p>大多数涉及到系统管理的命令都存放在该目录中，它是超级权限用户root的可执行命令存放地，普通用户无权限执行这个目录下的命令，凡是目录sbin中包含的命令都是root权限才能执行的。</p>
-<h3 id="srv"><a href="#srv" class="headerlink" title="/srv"></a>/srv</h3><p>该目录存放一些服务启动之后需要提取的数据。</p>
-<h3 id="tmp"><a href="#tmp" class="headerlink" title="/tmp"></a>/tmp</h3><p>该目录用于存放临时文件，有时用户运行程序的时候，会产生一些临时文件。/tmp就是用来存放临时文件的。/var/tmp目录和该目录的作用是相似的。</p>
-<h3 id="var"><a href="#var" class="headerlink" title="/var"></a>/var</h3><p>该目录的内容是经常变动的，/var/下有/var/log目录用来存放系统日志的目录。/var/www目录用来定义Apache服务站点存放目录。/var/lib用来存放一些库文件。</p>
+<li>针对伪终端的devpts文件系统<h3 id="usr"><a href="#usr" class="headerlink" title="/usr"></a>/usr</h3>包括与系统用户直接有关的文件和目录，例如医用程序及支持它们的库文件。类似于windows下的program files目录。<h3 id="boot"><a href="#boot" class="headerlink" title="/boot"></a>/boot</h3>包括内核和其它系统启动期间使用的文件。是启动Linux时使用的核心文件，有链接文件和镜像文件。<h3 id="etc"><a href="#etc" class="headerlink" title="/etc"></a>/etc</h3>存放系统配置文件和目录<strong> （注意：经常使用该目录） </strong><h3 id="lost-found"><a href="#lost-found" class="headerlink" title="/lost+found"></a>/lost+found</h3>默认为空，被FSCK用来放置零散文件（没有名称的文件）。当系统非法关机后，这里就会存放一些文件。<br>FSCK(file system check)用来检查和维护不一致的文件系统。若系统掉电或磁盘发生问题，可以利用fsck命令对文件系统进行检查。<h3 id="misc"><a href="#misc" class="headerlink" title="/misc"></a>/misc</h3>存放杂项文件或目录，即那些用途或含义不明确的文件或目录可以存放在该目录下。<h3 id="proc"><a href="#proc" class="headerlink" title="proc"></a>proc</h3>操作系统运行时，进程（正在运行中的程序）信息及内核信息（如：CPU、硬盘分区、内存信息等）存放在这里。/proc目录是伪装的文件系统proc的挂载目录，proc并不是真正的文件系统。因此这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。也就是说， <strong> 这个目录的内容不在磁盘上而是在内存里。 </strong><h3 id="sbin"><a href="#sbin" class="headerlink" title="/sbin"></a>/sbin</h3>大多数涉及到系统管理的命令都存放在该目录中，它是超级权限用户root的可执行命令存放地，普通用户无权限执行这个目录下的命令，凡是目录sbin中包含的命令都是root权限才能执行的。<h3 id="srv"><a href="#srv" class="headerlink" title="/srv"></a>/srv</h3>该目录存放一些服务启动之后需要提取的数据。<h3 id="tmp"><a href="#tmp" class="headerlink" title="/tmp"></a>/tmp</h3>该目录用于存放临时文件，有时用户运行程序的时候，会产生一些临时文件。/tmp就是用来存放临时文件的。/var/tmp目录和该目录的作用是相似的。<h3 id="var"><a href="#var" class="headerlink" title="/var"></a>/var</h3>该目录的内容是经常变动的，/var/下有/var/log目录用来存放系统日志的目录。/var/www目录用来定义Apache服务站点存放目录。/var/lib用来存放一些库文件。</li>
+</ul>
 </blockquote>
-</li>
+</the></li>
 </ul>
 <h2 id="—"><a href="#—" class="headerlink" title="—"></a>—</h2><h2 id="其它重要系统目录"><a href="#其它重要系统目录" class="headerlink" title="其它重要系统目录"></a>其它重要系统目录</h2><h3 id="usr-bin"><a href="#usr-bin" class="headerlink" title="/usr/bin"></a>/usr/bin</h3><p>这个目录是可执行程序的目录，普通用户就有权限执行。当我们从系统自带的软件包安装一个程序时，他的可执行文件大多存放在这个目录。相似的目录是/usr/local/bin目录。有时/usr/bin中的文件是/usr/local/bin的链接文件。</p>
 <h3 id="usr-sbin"><a href="#usr-sbin" class="headerlink" title="/usr/sbin"></a>/usr/sbin</h3><p>这个目录也是可执行程序的目录，但大多数存放涉及系统管理的命令。只有root权限才能执行，相似的目录是/sbin或/usr/local/sbin或/usr/X11R6/sbin等。</p>
@@ -351,7 +342,7 @@
         <p><span>本文标题:</span><a href="/2017/01/17/Linux-Directory/">Linux常用目录结构</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Muscleape</a></p>
         <p><span>发布时间:</span>2017-01-17, 21:34:29</p>
-        <p><span>最后更新:</span>2017-01-17, 22:36:16</p>
+        <p><span>最后更新:</span>2017-01-17, 22:38:41</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/01/17/Linux-Directory/" title="Linux常用目录结构">http://yoursite.com/2017/01/17/Linux-Directory/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/17/Linux-Directory/　　作者: Muscleape" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
