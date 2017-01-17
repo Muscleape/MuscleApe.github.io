@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-17T14:42:42.437Z</updated>
+  <updated>2017-01-17T14:46:37.277Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/01/17/Linux-Directory/"/>
     <id>http://yoursite.com/2017/01/17/Linux-Directory/</id>
     <published>2017-01-17T13:34:29.000Z</published>
-    <updated>2017-01-17T14:42:42.437Z</updated>
+    <updated>2017-01-17T14:46:37.277Z</updated>
     
     <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Linux系统常用目录结构</excert></p>
 <ul>
@@ -41,11 +41,11 @@
 </the></li>
 </ul>
 <h3 id="sys"><a href="#sys" class="headerlink" title="/sys"></a>/sys</h3><p>这个是Linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的文件系统sysfs,sysfs文件系统集成了下面3中文件系统的信息。该文件系统是内核设备树的一个直观反映。当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建。</p>
-<ul>
+<ol>
 <li>针对进程信息的proc文件系统</li>
 <li>针对设备的devfs文件系统</li>
 <li>针对伪终端的devpts文件系统</li>
-</ul>
+</ol>
 <h3 id="usr"><a href="#usr" class="headerlink" title="/usr"></a>/usr</h3><p>包括与系统用户直接有关的文件和目录，例如医用程序及支持它们的库文件。类似于windows下的program files目录。</p>
 <h3 id="boot"><a href="#boot" class="headerlink" title="/boot"></a>/boot</h3><p>包括内核和其它系统启动期间使用的文件。是启动Linux时使用的核心文件，有链接文件和镜像文件。</p>
 <h3 id="etc"><a href="#etc" class="headerlink" title="/etc"></a>/etc</h3><p>存放系统配置文件和目录<strong> （注意：经常使用该目录） </strong></p>
@@ -57,12 +57,12 @@
 <h3 id="sbin"><a href="#sbin" class="headerlink" title="/sbin"></a>/sbin</h3><p>大多数涉及到系统管理的命令都存放在该目录中，它是超级权限用户root的可执行命令存放地，普通用户无权限执行这个目录下的命令，凡是目录sbin中包含的命令都是root权限才能执行的。</p>
 <h3 id="srv"><a href="#srv" class="headerlink" title="/srv"></a>/srv</h3><p>该目录存放一些服务启动之后需要提取的数据。</p>
 <h3 id="tmp"><a href="#tmp" class="headerlink" title="/tmp"></a>/tmp</h3><p>该目录用于存放临时文件，有时用户运行程序的时候，会产生一些临时文件。/tmp就是用来存放临时文件的。/var/tmp目录和该目录的作用是相似的。</p>
-<h3 id="var"><a href="#var" class="headerlink" title="/var"></a>/var</h3><h2 id="该目录的内容是经常变动的，-var-下有-var-log目录用来存放系统日志的目录。-var-www目录用来定义Apache服务站点存放目录。-var-lib用来存放一些库文件。"><a href="#该目录的内容是经常变动的，-var-下有-var-log目录用来存放系统日志的目录。-var-www目录用来定义Apache服务站点存放目录。-var-lib用来存放一些库文件。" class="headerlink" title="该目录的内容是经常变动的，/var/下有/var/log目录用来存放系统日志的目录。/var/www目录用来定义Apache服务站点存放目录。/var/lib用来存放一些库文件。"></a>该目录的内容是经常变动的，/var/下有/var/log目录用来存放系统日志的目录。/var/www目录用来定义Apache服务站点存放目录。/var/lib用来存放一些库文件。</h2><hr>
-<h2 id="其它重要系统目录"><a href="#其它重要系统目录" class="headerlink" title="其它重要系统目录"></a>其它重要系统目录</h2><h3 id="usr-bin"><a href="#usr-bin" class="headerlink" title="/usr/bin"></a>/usr/bin</h3><p>这个目录是可执行程序的目录，普通用户就有权限执行。当我们从系统自带的软件包安装一个程序时，他的可执行文件大多存放在这个目录。相似的目录是/usr/local/bin目录。有时/usr/bin中的文件是/usr/local/bin的链接文件。</p>
+<h3 id="var"><a href="#var" class="headerlink" title="/var"></a>/var</h3><p>该目录的内容是经常变动的，/var/下有/var/log目录用来存放系统日志的目录。/var/www目录用来定义Apache服务站点存放目录。/var/lib用来存放一些库文件。</p>
+</blockquote>
+<h2 id="—"><a href="#—" class="headerlink" title="—"></a>—</h2><h2 id="其它重要系统目录"><a href="#其它重要系统目录" class="headerlink" title="其它重要系统目录"></a>其它重要系统目录</h2><h3 id="usr-bin"><a href="#usr-bin" class="headerlink" title="/usr/bin"></a>/usr/bin</h3><p>这个目录是可执行程序的目录，普通用户就有权限执行。当我们从系统自带的软件包安装一个程序时，他的可执行文件大多存放在这个目录。相似的目录是/usr/local/bin目录。有时/usr/bin中的文件是/usr/local/bin的链接文件。</p>
 <h3 id="usr-sbin"><a href="#usr-sbin" class="headerlink" title="/usr/sbin"></a>/usr/sbin</h3><p>这个目录也是可执行程序的目录，但大多数存放涉及系统管理的命令。只有root权限才能执行，相似的目录是/sbin或/usr/local/sbin或/usr/X11R6/sbin等。</p>
 <h3 id="usr-src"><a href="#usr-src" class="headerlink" title="/usr/src"></a>/usr/src</h3><p>内核源码默认的放置目录</p>
 <h3 id="proc-cpuinfo"><a href="#proc-cpuinfo" class="headerlink" title="/proc/cpuinfo"></a>/proc/cpuinfo</h3><p>关于处理器的信息，如类型、厂家、型号和性能等。例如可通过下面的命令查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /proc/cpuinfo</div></pre></td></tr></table></figure></p>
-</blockquote>
 ]]></content>
     
     <summary type="html">
