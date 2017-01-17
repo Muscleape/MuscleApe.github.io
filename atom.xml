@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-17T13:26:24.475Z</updated>
+  <updated>2017-01-17T13:39:55.268Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux常用目录结构</title>
+    <link href="http://yoursite.com/2017/01/17/Linux-Directory/"/>
+    <id>http://yoursite.com/2017/01/17/Linux-Directory/</id>
+    <published>2017-01-17T13:34:29.000Z</published>
+    <updated>2017-01-17T13:39:55.268Z</updated>
+    
+    <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Linux系统常用目录结构</excert></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+</the></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excert in index | 首页摘要&gt;&lt;br&gt;Linux系统常用目录结构&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS_SunJDK</title>
