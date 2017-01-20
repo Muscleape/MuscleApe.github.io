@@ -178,9 +178,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="/muscleape529@gmail.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" href="https://github.com/Muscleape" title="GitHub"></a>
+                            
+                                <a class="fa StackOverflow" href="http://stackoverflow.com/users/7098479/muscleape" title="StackOverflow"></a>
                             
                         </ul>
                     </nav>
@@ -210,7 +210,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">专注于折腾</div>
                 </section>
                 
             </div>
@@ -250,9 +250,9 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="/muscleape529@gmail.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" href="https://github.com/Muscleape" title="GitHub"></a>
+                            
+                                <a class="fa StackOverflow" target="_blank" href="http://stackoverflow.com/users/7098479/muscleape" title="StackOverflow"></a>
                             
                         </ul>
             </nav>
@@ -753,6 +753,23 @@ MathJax.Hub.Queue(function() {
         $("#scroll a, #toc a").removeAttr("target");
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "点我~点我~~点我~~~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "唉吆喂，来了呀~~~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
