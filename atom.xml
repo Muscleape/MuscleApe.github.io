@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-17T14:49:00.572Z</updated>
+  <updated>2017-01-20T01:35:09.039Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/01/17/Linux-Directory/"/>
     <id>http://yoursite.com/2017/01/17/Linux-Directory/</id>
     <published>2017-01-17T13:34:29.000Z</published>
-    <updated>2017-01-17T14:49:00.572Z</updated>
+    <updated>2017-01-20T01:35:09.039Z</updated>
     
     <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Linux系统常用目录结构</excert></p>
 <ul>
@@ -37,6 +37,7 @@
 <h3 id="dev"><a href="#dev" class="headerlink" title="/dev"></a>/dev</h3><p>dev是Device的缩写。存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。<br><strong>（注意：设备文件不是驱动程序。过去，在添加新磁盘或设备后，往往需要手动增加设备文件。现在通常我们不需要手动增加设备文件，运行一下下面的命令，系统就会自动配置相应的设备。）</strong></p>
 <blockquote>
 <p>service kudzu start</p>
+</blockquote>
 <h3 id="home"><a href="#home" class="headerlink" title="/home"></a>/home</h3><p>Linux用户的主目录。在Linux系统中，每个用户都有自己的一个目录，一般该目录名是以用户的账号命名的。</p>
 <h3 id="lib"><a href="#lib" class="headerlink" title="/lib"></a>/lib</h3><p>存放系统最基本的动态链接共享库，包含许多被/bin和/sbin中的程序使用的库文件，目录/usr/lib/中包含有更多用于用户程序的库文件。作用类似于windows里的dll文件，几乎所有的应用程序都需要用到这些共享库。</p>
 <h3 id="media"><a href="#media" class="headerlink" title="/media"></a>/media</h3><p>Linux系统自动识别的一些设备，例如：U盘、光驱、移动硬盘等。Linux会把识别的设备挂载到这个目录下。</p>
@@ -44,7 +45,6 @@
 <h3 id="opt"><a href="#opt" class="headerlink" title="/opt"></a>/opt</h3><p>数据额外安装软件所摆放的目录。默认为空。</p>
 <h3 id="root"><a href="#root" class="headerlink" title="/root"></a>/root</h3><p>超级管理员用户的主目录。</p>
 <h3 id="selinux"><a href="#selinux" class="headerlink" title="/selinux"></a>/selinux</h3><p>这个目录是RedHat/CentOS所特有的目录，SeLinux是一种安全机制，较复杂。该目录用于存放SeLinux相关的文件。<br><strong> 一般我们在安装操作系统的时候都禁用SeLinux </strong></p>
-</blockquote>
 <h3 id="sys"><a href="#sys" class="headerlink" title="/sys"></a>/sys</h3><p>这个是Linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的文件系统sysfs,sysfs文件系统集成了下面3中文件系统的信息。该文件系统是内核设备树的一个直观反映。当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建。</p>
 <ol>
 <li>针对进程信息的proc文件系统</li>
