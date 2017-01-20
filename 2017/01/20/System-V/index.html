@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="CentOS7卸载OpenJDK并安装SunJDK">
+<meta name="description" content="Linux启动模式System V介绍">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS_SunJDK">
-<meta property="og:url" content="http://yoursite.com/2017/01/16/CentOSSunJDK/index.html">
+<meta property="og:title" content="System-V">
+<meta property="og:url" content="http://yoursite.com/2017/01/20/System-V/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="CentOS7卸载OpenJDK并安装SunJDK">
-<meta property="og:updated_time" content="2017-01-17T13:26:24.475Z">
+<meta property="og:description" content="Linux启动模式System V介绍">
+<meta property="og:updated_time" content="2017-01-20T02:56:26.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS_SunJDK">
-<meta name="twitter:description" content="CentOS7卸载OpenJDK并安装SunJDK">
+<meta name="twitter:title" content="System-V">
+<meta name="twitter:description" content="Linux启动模式System V介绍">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>CentOS_SunJDK | Hexo</title>
+<title>System-V | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -259,11 +259,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-CentOSSunJDK" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-System-V" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/16/CentOSSunJDK/" class="article-date">
-      <time datetime="2017-01-16T13:37:16.000Z" itemprop="datePublished">2017-01-16</time>
+      <a href="/2017/01/20/System-V/" class="article-date">
+      <time datetime="2017-01-20T02:02:37.000Z" itemprop="datePublished">2017-01-20</time>
 </a>
 
 
@@ -278,7 +278,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      CentOS_SunJDK
+      System-V
     </h1>
   
 
@@ -293,7 +293,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS7/">CentOS7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdk/">jdk</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System-V/">System_V</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/启动模式/">启动模式</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -303,28 +303,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excert in="" index="" |="" 首页摘要=""><br>CentOS7卸载OpenJDK并安装SunJDK</excert></p>
+        <p><excert in="" index="" |="" 首页摘要=""><br>Linux启动模式System V介绍</excert></p>
 <ul>
 <li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><h2 id="安装说明"><a href="#安装说明" class="headerlink" title="安装说明"></a>安装说明</h2></the></li>
-</ul>
-<ul>
-<li>系统环境： CentOS 7</li>
-<li>安装方式： rmp安装</li>
-<li>软件： jdk-8u111-linux-x64.rpm</li>
-<li>下载地址： <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">Oracle JDK 官网下载地址</a><h2 id="卸载CentOS默认安装的OpenJDK"><a href="#卸载CentOS默认安装的OpenJDK" class="headerlink" title="卸载CentOS默认安装的OpenJDK"></a>卸载CentOS默认安装的OpenJDK</h2><h3 id="检查CentOS7默认安装版本"><a href="#检查CentOS7默认安装版本" class="headerlink" title="检查CentOS7默认安装版本"></a>检查CentOS7默认安装版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# java -version</div><div class="line">java version &quot;1.7.0_45&quot;</div><div class="line">OpenJDK Runtime Environment (rhel-2.4.3.3.el6-x86_64 u45-b15)</div><div class="line">OpenJDK 64-Bit Server VM (build 24.45-b08, mixed mode)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="查看JDK安装的rpm信息"><a href="#查看JDK安装的rpm信息" class="headerlink" title="查看JDK安装的rpm信息"></a>查看JDK安装的rpm信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# rpm -qa |  grep java</div><div class="line">java-1.7.0-openjdk-1.7.0.45-2.4.3.3.el6.x86_64</div><div class="line">tzdata-java-2013g-1.el6.noarch</div><div class="line">java-1.6.0-openjdk-1.6.0.0-1.66.1.13.0.el6.x86_64</div></pre></td></tr></table></figure>
-<h3 id="卸载找出的已安装Java相关rpm文件"><a href="#卸载找出的已安装Java相关rpm文件" class="headerlink" title="卸载找出的已安装Java相关rpm文件"></a>卸载找出的已安装Java相关rpm文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# rpm -e --nodeps java-1.7.0-openjdk-1.7.0.45-2.4.3.3.el6.x86_64</div><div class="line">[root@localhost ~]# rpm -e --nodeps tzdata-java-2013g-1.el6.noarch</div><div class="line">[root@localhost ~]# rpm -e --nodeps java-1.6.0-openjdk-1.6.0.0-1.66.1.13.0.el6.x86_64</div></pre></td></tr></table></figure>
-<h2 id="安装SunJDK"><a href="#安装SunJDK" class="headerlink" title="安装SunJDK"></a>安装SunJDK</h2><h3 id="下载SunJDK的rpm安装文件"><a href="#下载SunJDK的rpm安装文件" class="headerlink" title="下载SunJDK的rpm安装文件"></a>下载SunJDK的rpm安装文件</h3><p>例如：我放到目录/usr/local/，然后使用rpm命令安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# rpm -ivh jdk-8u111-linux-x64.rpm</div></pre></td></tr></table></figure></p>
-<p>jdk默认安装路径为：/usr/java/</p>
-<h3 id="验证是否正确安装"><a href="#验证是否正确安装" class="headerlink" title="验证是否正确安装"></a>验证是否正确安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# java -version</div><div class="line">java version &quot;1.8.0_111&quot;</div><div class="line">Java(TM) SE Runtime Environment (build 1.8.0_111-b14)</div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.111-b14, mixed mode)</div></pre></td></tr></table></figure>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="打开环境变量存储文件"><a href="#打开环境变量存储文件" class="headerlink" title="打开环境变量存储文件"></a>打开环境变量存储文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# vi /etc/profile</div></pre></td></tr></table></figure>
-<h3 id="在文件末尾追加以下内容"><a href="#在文件末尾追加以下内容" class="headerlink" title="在文件末尾追加以下内容"></a>在文件末尾追加以下内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># SunJDK 1.8</div><div class="line">JAVA_HOME=/usr/java/jdk1.8.0_111</div><div class="line">JRE_HOME=/usr/java/jdk1.8.0_111/jre</div><div class="line">PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</div><div class="line">CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</div><div class="line">export JAVA_HOME JRE_HOME PATH CLASSPATH</div></pre></td></tr></table></figure>
-<h3 id="使修改的环境变量起作用"><a href="#使修改的环境变量起作用" class="headerlink" title="使修改的环境变量起作用"></a>使修改的环境变量起作用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# source /etc/profile</div></pre></td></tr></table></figure>
-<h3 id="检查系统环境变量PATH的值"><a href="#检查系统环境变量PATH的值" class="headerlink" title="检查系统环境变量PATH的值"></a>检查系统环境变量PATH的值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# echo $PATH</div><div class="line">/usr/local/cmake/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/java/jdk1.8.0_111/bin:/usr/java/jdk1.8.0_111/jre/bin:/root/bin</div></pre></td></tr></table></figure>
+<the rest="" of="" contents="">
 
+</the></li>
+</ul>
+<p>System V启动方式，是Linux采用的启动方式，System V能够为不同的运行级别定义启动那些服务.<br>进入Linux系统后看到的黑乎乎的界面（开发模式），因为系统如果启动选择开发模式，<strong> 能减少启动时间，优化内存等 </strong>。但是通常刚安装完的Linux系统，看到的是图形化界面。</p>
+<blockquote>
+<p>CentOS下切换到开发模式，使用快捷键 Ctrl+F2,从开发模式返回图形界面使用Ctrl+F1<br>命令行里输入命令startx命令切换到图形界面</p>
+</blockquote>
+<h3 id="系统启动模式配置文件"><a href="#系统启动模式配置文件" class="headerlink" title="系统启动模式配置文件"></a>系统启动模式配置文件</h3><h4 id="etc-inittab"><a href="#etc-inittab" class="headerlink" title="/etc/inittab"></a>/etc/inittab</h4><p><strong> 设置系统启动模式，必须使用root身份登录才能修改 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@admin ~]:# vi /etc/inittab</div></pre></td></tr></table></figure></p>
+<p>输入后打开inittab文件，看到配置信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">\# inittab is only used by upstart for the default runlevel.</div><div class="line">\#</div><div class="line">\# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.</div><div class="line">\#</div><div class="line">\# System initialization is started by /etc/init/rcS.conf</div><div class="line">\#</div><div class="line">\# Individual runlevels are started by /etc/init/rc.conf</div><div class="line">\#</div><div class="line">\# Ctrl-Alt-Delete is handled by /etc/init/control-alt-delete.conf</div><div class="line">\#</div><div class="line">\# Terminal gettys are handled by /etc/init/tty.conf and /etc/init/serial.conf,</div><div class="line">\# with configuration in /etc/sysconfig/init.</div><div class="line">\#</div><div class="line">\# For information on how to write upstart event handlers, or how</div><div class="line">\# upstart works, see init(5), init(8), and initctl(8).</div><div class="line">\#</div><div class="line">\# Default runlevel. The runlevels used are:</div><div class="line">\#   0 - halt (Do NOT set initdefault to this)</div><div class="line">\#   1 - Single user mode</div><div class="line">\#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)</div><div class="line">\#   3 - Full multiuser mode</div><div class="line">\#   4 - unused</div><div class="line">\#   5 - X11</div><div class="line">\#   6 - reboot (Do NOT set initdefault to this)</div><div class="line">\#</div><div class="line">id:5:initdefault:</div><div class="line">~</div></pre></td></tr></table></figure></p>
+<p>可以看到Linux系统中默认的系统启动基本一共有7种，分别是：</p>
+<h3 id="0：关机-不要设置这个！"><a href="#0：关机-不要设置这个！" class="headerlink" title="0：关机(不要设置这个！)"></a>0：关机(不要设置这个！)</h3><h3 id="1：单用户-类似于windows操作系统的安全模式"><a href="#1：单用户-类似于windows操作系统的安全模式" class="headerlink" title="1：单用户(类似于windows操作系统的安全模式)"></a>1：单用户(类似于windows操作系统的安全模式)</h3><h3 id="2：多用户状态没有网络服务"><a href="#2：多用户状态没有网络服务" class="headerlink" title="2：多用户状态没有网络服务"></a>2：多用户状态没有网络服务</h3><h3 id="3：多用户状态由网络服务-在做开发时，通常设置成这个启动级别，直接进入到命令行的界面"><a href="#3：多用户状态由网络服务-在做开发时，通常设置成这个启动级别，直接进入到命令行的界面" class="headerlink" title="3：多用户状态由网络服务(在做开发时，通常设置成这个启动级别，直接进入到命令行的界面)"></a>3：多用户状态由网络服务(在做开发时，通常设置成这个启动级别，直接进入到命令行的界面)</h3><h3 id="4：系统未使用保留给用户-不要设置这个！"><a href="#4：系统未使用保留给用户-不要设置这个！" class="headerlink" title="4：系统未使用保留给用户(不要设置这个！)"></a>4：系统未使用保留给用户(不要设置这个！)</h3><h3 id="5：图形界面-这是linux默认的启动级别，直接进入图形界面"><a href="#5：图形界面-这是linux默认的启动级别，直接进入图形界面" class="headerlink" title="5：图形界面(这是linux默认的启动级别，直接进入图形界面)"></a>5：图形界面(这是linux默认的启动级别，直接进入图形界面)</h3><h3 id="6：系统重启-不要设置这个！"><a href="#6：系统重启-不要设置这个！" class="headerlink" title="6：系统重启(不要设置这个！)"></a>6：系统重启(不要设置这个！)</h3><p>最后的一行设置系统默认的启动级别,5，也就是图形界面启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">id:5:initdefault:</div></pre></td></tr></table></figure></p>
+<p>如果需要修改默认级别为开发模式，只需要将5改成3，然后重新启动系统即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">将 id:5:initdefault:  改成   id:3:initdefault:</div></pre></td></tr></table></figure></p>
+<p><strong> 警告：千万不要将系统基本设置为0,4,6！！！！！！ </strong></p>
+<p>如果只是需要在Linux上做开发、部署项目的话，建议一般讲系统启动模式设置为开发模式</p>
+<p>System V启动方式，启动服务的脚本放在/etc/rc.d/init.d下，能够在/etc/rc.d目录下看到很多类似 rc0.d或rc2.d这样的目录，这就是为每个不同的运行级别定义启动哪些服务的目录，数字0 2就代表运行级别，进入这些目录，能看到很多链接文件，以S或K开头的这些文件分别表示在当前运行级别下是否开启这个服务，这些文件分别链接到/etc/rc.d/init.d/下面的很多可执行文件。<br><strong> 需要注意，在一些System V启动模式的操作系统上（如RedHat9），除了有/etc/rc.d/init.d/这个目录，还有/etc/init.d/这个目录，其实 ls -l一下就可以看到，/etc/init.d/这个目录本来就是链接到/etc/rc.d/init.d/的一个链接目录 </strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">** 如果有恶意用户将系统启动级别设置成0、4、6，我们该怎么解决这个问题？ **</div><div class="line"></div><div class="line">在linux系统启动界面，我们快速按键盘上的 【e】 按钮，然后进入到了grub引导界面(这个根据Linux的版本可能有不同，我的CentOS6.4是需要在启动时按F2进入引导界面，</div><div class="line">这个可以根据自己安装的Linux系统在开机时的提示进入引导界面)，</div><div class="line">在这个界面中选择第二个选项，然后再按下键盘上的 【e】按钮，在进入修改界面后，在最后输入【 1】(1前面有空格)</div><div class="line">这样，linux系统在启动时就会以 单用户级别 启动起来(为什么这里不将其设置成3或者5，是因为linux系统</div><div class="line">在启动时首先会去检查 /etc/inittab 文件的设定启动级别，如果在这时设置成5或者3，系统还是进不去，只能设置成1)</div><div class="line">在设置好以后，按下键盘的【b】按钮，系统就能重新启动，并进入 单用户级别，这样我们就可以按照之前的方法修改</div><div class="line">linux系统的启动级别。</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -332,13 +330,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/01/16/CentOSSunJDK/">CentOS_SunJDK</a></p>
+        <p><span>本文标题:</span><a href="/2017/01/20/System-V/">System-V</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Muscleape</a></p>
-        <p><span>发布时间:</span>2017-01-16, 21:37:16</p>
-        <p><span>最后更新:</span>2017-01-17, 21:26:24</p>
+        <p><span>发布时间:</span>2017-01-20, 10:02:37</p>
+        <p><span>最后更新:</span>2017-01-20, 10:56:26</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/01/16/CentOSSunJDK/" title="CentOS_SunJDK">http://yoursite.com/2017/01/16/CentOSSunJDK/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/16/CentOSSunJDK/　　作者: Muscleape" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/20/System-V/" title="System-V">http://yoursite.com/2017/01/20/System-V/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/20/System-V/　　作者: Muscleape" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -350,16 +348,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/01/17/Linux-Directory/">
-                    Linux常用目录结构
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/15/WhyWriteBlog/">
-                    为啥要整博客这玩意了呢？
+                <a href="/2017/01/17/Linux-Directory/">
+                    Linux常用目录结构
                 </a>
             </div>
         
@@ -371,7 +363,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装说明"><span class="toc-number">1.</span> <span class="toc-text">安装说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载CentOS默认安装的OpenJDK"><span class="toc-number">2.</span> <span class="toc-text">卸载CentOS默认安装的OpenJDK</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#检查CentOS7默认安装版本"><span class="toc-number">2.1.</span> <span class="toc-text">检查CentOS7默认安装版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看JDK安装的rpm信息"><span class="toc-number">2.2.</span> <span class="toc-text">查看JDK安装的rpm信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载找出的已安装Java相关rpm文件"><span class="toc-number">2.3.</span> <span class="toc-text">卸载找出的已安装Java相关rpm文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装SunJDK"><span class="toc-number">3.</span> <span class="toc-text">安装SunJDK</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载SunJDK的rpm安装文件"><span class="toc-number">3.1.</span> <span class="toc-text">下载SunJDK的rpm安装文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证是否正确安装"><span class="toc-number">3.2.</span> <span class="toc-text">验证是否正确安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置环境变量"><span class="toc-number">4.</span> <span class="toc-text">配置环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#打开环境变量存储文件"><span class="toc-number">4.1.</span> <span class="toc-text">打开环境变量存储文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在文件末尾追加以下内容"><span class="toc-number">4.2.</span> <span class="toc-text">在文件末尾追加以下内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使修改的环境变量起作用"><span class="toc-number">4.3.</span> <span class="toc-text">使修改的环境变量起作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查系统环境变量PATH的值"><span class="toc-number">4.4.</span> <span class="toc-text">检查系统环境变量PATH的值</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统启动模式配置文件"><span class="toc-number">1.</span> <span class="toc-text">系统启动模式配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#etc-inittab"><span class="toc-number">1.1.</span> <span class="toc-text">/etc/inittab</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0：关机-不要设置这个！"><span class="toc-number">2.</span> <span class="toc-text">0：关机(不要设置这个！)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1：单用户-类似于windows操作系统的安全模式"><span class="toc-number">3.</span> <span class="toc-text">1：单用户(类似于windows操作系统的安全模式)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2：多用户状态没有网络服务"><span class="toc-number">4.</span> <span class="toc-text">2：多用户状态没有网络服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3：多用户状态由网络服务-在做开发时，通常设置成这个启动级别，直接进入到命令行的界面"><span class="toc-number">5.</span> <span class="toc-text">3：多用户状态由网络服务(在做开发时，通常设置成这个启动级别，直接进入到命令行的界面)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4：系统未使用保留给用户-不要设置这个！"><span class="toc-number">6.</span> <span class="toc-text">4：系统未使用保留给用户(不要设置这个！)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5：图形界面-这是linux默认的启动级别，直接进入图形界面"><span class="toc-number">7.</span> <span class="toc-text">5：图形界面(这是linux默认的启动级别，直接进入图形界面)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6：系统重启-不要设置这个！"><span class="toc-number">8.</span> <span class="toc-text">6：系统重启(不要设置这个！)</span></a></li></ol>
         
     </div>
     <style>
@@ -407,7 +399,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"CentOS_SunJDK　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"System-V　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -423,7 +415,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/16/CentOSSunJDK/" data-title="CentOS_SunJDK" data-url="http://yoursite.com/2017/01/16/CentOSSunJDK/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/20/System-V/" data-title="System-V" data-url="http://yoursite.com/2017/01/20/System-V/"></div>
     <script>
         var duoshuoQuery = {short_name:"muscleape"};
         var loadComment = function(){
@@ -448,15 +440,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/17/Linux-Directory/" title="上一篇: Linux常用目录结构">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/15/WhyWriteBlog/" title="下一篇: 为啥要整博客这玩意了呢？">
+            <a href="/2017/01/17/Linux-Directory/" title="下一篇: Linux常用目录结构">
                 <i class="fa fa-angle-right"></i>
             </a>
         

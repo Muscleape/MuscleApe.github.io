@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/01/20/System-V/</loc>
+    <lastmod>2017-01-20T02:56:26.407Z</lastmod>
+    <data>
+        <display>
+        <title>System-V</title>
+        <pubTime>2017-01-20T02:02:37.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>启动模式</tag>
+         
+        <tag>System_V</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/01/17/Linux-Directory/</loc>
-    <lastmod>2017-01-20T01:38:13.364Z</lastmod>
+    <lastmod>2017-01-20T02:29:02.819Z</lastmod>
     <data>
         <display>
         <title>Linux常用目录结构</title>

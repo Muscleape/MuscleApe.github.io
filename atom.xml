@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-20T01:38:13.364Z</updated>
+  <updated>2017-01-20T02:56:26.407Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>System-V</title>
+    <link href="http://yoursite.com/2017/01/20/System-V/"/>
+    <id>http://yoursite.com/2017/01/20/System-V/</id>
+    <published>2017-01-20T02:02:37.000Z</published>
+    <updated>2017-01-20T02:56:26.407Z</updated>
+    
+    <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Linux启动模式System V介绍</excert></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="">
+
+</the></li>
+</ul>
+<p>System V启动方式，是Linux采用的启动方式，System V能够为不同的运行级别定义启动那些服务.<br>进入Linux系统后看到的黑乎乎的界面（开发模式），因为系统如果启动选择开发模式，<strong> 能减少启动时间，优化内存等 </strong>。但是通常刚安装完的Linux系统，看到的是图形化界面。</p>
+<blockquote>
+<p>CentOS下切换到开发模式，使用快捷键 Ctrl+F2,从开发模式返回图形界面使用Ctrl+F1<br>命令行里输入命令startx命令切换到图形界面</p>
+</blockquote>
+<h3 id="系统启动模式配置文件"><a href="#系统启动模式配置文件" class="headerlink" title="系统启动模式配置文件"></a>系统启动模式配置文件</h3><h4 id="etc-inittab"><a href="#etc-inittab" class="headerlink" title="/etc/inittab"></a>/etc/inittab</h4><p><strong> 设置系统启动模式，必须使用root身份登录才能修改 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@admin ~]:# vi /etc/inittab</div></pre></td></tr></table></figure></p>
+<p>输入后打开inittab文件，看到配置信息如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">\# inittab is only used by upstart for the default runlevel.</div><div class="line">\#</div><div class="line">\# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.</div><div class="line">\#</div><div class="line">\# System initialization is started by /etc/init/rcS.conf</div><div class="line">\#</div><div class="line">\# Individual runlevels are started by /etc/init/rc.conf</div><div class="line">\#</div><div class="line">\# Ctrl-Alt-Delete is handled by /etc/init/control-alt-delete.conf</div><div class="line">\#</div><div class="line">\# Terminal gettys are handled by /etc/init/tty.conf and /etc/init/serial.conf,</div><div class="line">\# with configuration in /etc/sysconfig/init.</div><div class="line">\#</div><div class="line">\# For information on how to write upstart event handlers, or how</div><div class="line">\# upstart works, see init(5), init(8), and initctl(8).</div><div class="line">\#</div><div class="line">\# Default runlevel. The runlevels used are:</div><div class="line">\#   0 - halt (Do NOT set initdefault to this)</div><div class="line">\#   1 - Single user mode</div><div class="line">\#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)</div><div class="line">\#   3 - Full multiuser mode</div><div class="line">\#   4 - unused</div><div class="line">\#   5 - X11</div><div class="line">\#   6 - reboot (Do NOT set initdefault to this)</div><div class="line">\#</div><div class="line">id:5:initdefault:</div><div class="line">~</div></pre></td></tr></table></figure></p>
+<p>可以看到Linux系统中默认的系统启动基本一共有7种，分别是：</p>
+<h3 id="0：关机-不要设置这个！"><a href="#0：关机-不要设置这个！" class="headerlink" title="0：关机(不要设置这个！)"></a>0：关机(不要设置这个！)</h3><h3 id="1：单用户-类似于windows操作系统的安全模式"><a href="#1：单用户-类似于windows操作系统的安全模式" class="headerlink" title="1：单用户(类似于windows操作系统的安全模式)"></a>1：单用户(类似于windows操作系统的安全模式)</h3><h3 id="2：多用户状态没有网络服务"><a href="#2：多用户状态没有网络服务" class="headerlink" title="2：多用户状态没有网络服务"></a>2：多用户状态没有网络服务</h3><h3 id="3：多用户状态由网络服务-在做开发时，通常设置成这个启动级别，直接进入到命令行的界面"><a href="#3：多用户状态由网络服务-在做开发时，通常设置成这个启动级别，直接进入到命令行的界面" class="headerlink" title="3：多用户状态由网络服务(在做开发时，通常设置成这个启动级别，直接进入到命令行的界面)"></a>3：多用户状态由网络服务(在做开发时，通常设置成这个启动级别，直接进入到命令行的界面)</h3><h3 id="4：系统未使用保留给用户-不要设置这个！"><a href="#4：系统未使用保留给用户-不要设置这个！" class="headerlink" title="4：系统未使用保留给用户(不要设置这个！)"></a>4：系统未使用保留给用户(不要设置这个！)</h3><h3 id="5：图形界面-这是linux默认的启动级别，直接进入图形界面"><a href="#5：图形界面-这是linux默认的启动级别，直接进入图形界面" class="headerlink" title="5：图形界面(这是linux默认的启动级别，直接进入图形界面)"></a>5：图形界面(这是linux默认的启动级别，直接进入图形界面)</h3><h3 id="6：系统重启-不要设置这个！"><a href="#6：系统重启-不要设置这个！" class="headerlink" title="6：系统重启(不要设置这个！)"></a>6：系统重启(不要设置这个！)</h3><p>最后的一行设置系统默认的启动级别,5，也就是图形界面启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">id:5:initdefault:</div></pre></td></tr></table></figure></p>
+<p>如果需要修改默认级别为开发模式，只需要将5改成3，然后重新启动系统即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">将 id:5:initdefault:  改成   id:3:initdefault:</div></pre></td></tr></table></figure></p>
+<p><strong> 警告：千万不要将系统基本设置为0,4,6！！！！！！ </strong></p>
+<p>如果只是需要在Linux上做开发、部署项目的话，建议一般讲系统启动模式设置为开发模式</p>
+<p>System V启动方式，启动服务的脚本放在/etc/rc.d/init.d下，能够在/etc/rc.d目录下看到很多类似 rc0.d或rc2.d这样的目录，这就是为每个不同的运行级别定义启动哪些服务的目录，数字0 2就代表运行级别，进入这些目录，能看到很多链接文件，以S或K开头的这些文件分别表示在当前运行级别下是否开启这个服务，这些文件分别链接到/etc/rc.d/init.d/下面的很多可执行文件。<br><strong> 需要注意，在一些System V启动模式的操作系统上（如RedHat9），除了有/etc/rc.d/init.d/这个目录，还有/etc/init.d/这个目录，其实 ls -l一下就可以看到，/etc/init.d/这个目录本来就是链接到/etc/rc.d/init.d/的一个链接目录 </strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">** 如果有恶意用户将系统启动级别设置成0、4、6，我们该怎么解决这个问题？ **</div><div class="line"></div><div class="line">在linux系统启动界面，我们快速按键盘上的 【e】 按钮，然后进入到了grub引导界面(这个根据Linux的版本可能有不同，我的CentOS6.4是需要在启动时按F2进入引导界面，</div><div class="line">这个可以根据自己安装的Linux系统在开机时的提示进入引导界面)，</div><div class="line">在这个界面中选择第二个选项，然后再按下键盘上的 【e】按钮，在进入修改界面后，在最后输入【 1】(1前面有空格)</div><div class="line">这样，linux系统在启动时就会以 单用户级别 启动起来(为什么这里不将其设置成3或者5，是因为linux系统</div><div class="line">在启动时首先会去检查 /etc/inittab 文件的设定启动级别，如果在这时设置成5或者3，系统还是进不去，只能设置成1)</div><div class="line">在设置好以后，按下键盘的【b】按钮，系统就能重新启动，并进入 单用户级别，这样我们就可以按照之前的方法修改</div><div class="line">linux系统的启动级别。</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excert in index | 首页摘要&gt;&lt;br&gt;Linux启动模式System V介绍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="启动模式" scheme="http://yoursite.com/tags/%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="System_V" scheme="http://yoursite.com/tags/System-V/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux常用目录结构</title>
     <link href="http://yoursite.com/2017/01/17/Linux-Directory/"/>
     <id>http://yoursite.com/2017/01/17/Linux-Directory/</id>
     <published>2017-01-17T13:34:29.000Z</published>
-    <updated>2017-01-20T01:38:13.364Z</updated>
+    <updated>2017-01-20T02:29:02.819Z</updated>
     
     <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Linux系统常用目录结构</excert></p>
 <ul>
@@ -34,10 +81,7 @@
 </blockquote>
 <h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><h3 id=""><a href="#" class="headerlink" title="/"></a>/</h3><p>根目录，处于Linux系统树形结构的最顶端，它是Linux文件系统的入口，所有的目录、文件、设备都在<strong>/</strong>之下。</p>
 <h3 id="bin"><a href="#bin" class="headerlink" title="/bin"></a>/bin</h3><p>bin是Binary（二进制）的缩写，存放着Linux系统命令。</p>
-<h3 id="dev"><a href="#dev" class="headerlink" title="/dev"></a>/dev</h3><p>dev是Device的缩写。存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。<br><strong>（注意：设备文件不是驱动程序。过去，在添加新磁盘或设备后，往往需要手动增加设备文件。现在通常我们不需要手动增加设备文件，运行一下下面的命令，系统就会自动配置相应的设备。）</strong></p>
-<blockquote>
-<p>service kudzu start</p>
-</blockquote>
+<h3 id="dev"><a href="#dev" class="headerlink" title="/dev"></a>/dev</h3><p>dev是Device的缩写。存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。<br><strong>（注意：设备文件不是驱动程序。过去，在添加新磁盘或设备后，往往需要手动增加设备文件。现在通常我们不需要手动增加设备文件，运行一下下面的命令，系统就会自动配置相应的设备。）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service kudzu start</div></pre></td></tr></table></figure></p>
 <h3 id="home"><a href="#home" class="headerlink" title="/home"></a>/home</h3><p>Linux用户的主目录。在Linux系统中，每个用户都有自己的一个目录，一般该目录名是以用户的账号命名的。</p>
 <h3 id="lib"><a href="#lib" class="headerlink" title="/lib"></a>/lib</h3><p>存放系统最基本的动态链接共享库，包含许多被/bin和/sbin中的程序使用的库文件，目录/usr/lib/中包含有更多用于用户程序的库文件。作用类似于windows里的dll文件，几乎所有的应用程序都需要用到这些共享库。</p>
 <h3 id="media"><a href="#media" class="headerlink" title="/media"></a>/media</h3><p>Linux系统自动识别的一些设备，例如：U盘、光驱、移动硬盘等。Linux会把识别的设备挂载到这个目录下。</p>
@@ -59,7 +103,7 @@
 <p>FSCK(file system check)用来检查和维护不一致的文件系统。若系统掉电或磁盘发生问题，可以利用fsck命令对文件系统进行检查。</p>
 </blockquote>
 <h3 id="misc"><a href="#misc" class="headerlink" title="/misc"></a>/misc</h3><p>存放杂项文件或目录，即那些用途或含义不明确的文件或目录可以存放在该目录下。</p>
-<h3 id="proc"><a href="#proc" class="headerlink" title="proc"></a>proc</h3><p>操作系统运行时，进程（正在运行中的程序）信息及内核信息（如：CPU、硬盘分区、内存信息等）存放在这里。/proc目录是伪装的文件系统proc的挂载目录，proc并不是真正的文件系统。因此这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。也就是说， <strong> 这个目录的内容不在磁盘上而是在内存里。 </strong></p>
+<h3 id="proc"><a href="#proc" class="headerlink" title="/proc"></a>/proc</h3><p>操作系统运行时，进程（正在运行中的程序）信息及内核信息（如：CPU、硬盘分区、内存信息等）存放在这里。/proc目录是伪装的文件系统proc的挂载目录，proc并不是真正的文件系统。因此这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。也就是说， <strong> 这个目录的内容不在磁盘上而是在内存里。 </strong></p>
 <h3 id="sbin"><a href="#sbin" class="headerlink" title="/sbin"></a>/sbin</h3><p>大多数涉及到系统管理的命令都存放在该目录中，它是超级权限用户root的可执行命令存放地，普通用户无权限执行这个目录下的命令，凡是目录sbin中包含的命令都是root权限才能执行的。</p>
 <h3 id="srv"><a href="#srv" class="headerlink" title="/srv"></a>/srv</h3><p>该目录存放一些服务启动之后需要提取的数据。</p>
 <h3 id="tmp"><a href="#tmp" class="headerlink" title="/tmp"></a>/tmp</h3><p>该目录用于存放临时文件，有时用户运行程序的时候，会产生一些临时文件。/tmp就是用来存放临时文件的。/var/tmp目录和该目录的作用是相似的。</p>
@@ -68,6 +112,15 @@
 <h3 id="usr-sbin"><a href="#usr-sbin" class="headerlink" title="/usr/sbin"></a>/usr/sbin</h3><p>这个目录也是可执行程序的目录，但大多数存放涉及系统管理的命令。只有root权限才能执行，相似的目录是/sbin或/usr/local/sbin或/usr/X11R6/sbin等。</p>
 <h3 id="usr-src"><a href="#usr-src" class="headerlink" title="/usr/src"></a>/usr/src</h3><p>内核源码默认的放置目录</p>
 <h3 id="proc-cpuinfo"><a href="#proc-cpuinfo" class="headerlink" title="/proc/cpuinfo"></a>/proc/cpuinfo</h3><p>关于处理器的信息，如类型、厂家、型号和性能等。例如可通过下面的命令查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /proc/cpuinfo</div></pre></td></tr></table></figure></p>
+<h3 id="proc-devices"><a href="#proc-devices" class="headerlink" title="/proc/devices"></a>/proc/devices</h3><p>当前运行内核所配置的所有设备清单</p>
+<h3 id="proc-filesystems"><a href="#proc-filesystems" class="headerlink" title="/proc/filesystems"></a>/proc/filesystems</h3><p>当前运行内核所配置的文件系统</p>
+<h3 id="proc-dma"><a href="#proc-dma" class="headerlink" title="/proc/dma"></a>/proc/dma</h3><p>当前正在使用的DMA通道。</p>
+<blockquote>
+<p>DMA（Direct Memory Access），即直接存储器存取，是一种快速传送数据的机制。数据传递可以从适配卡到内存，从内存到适配卡或从一段内存到另一段内存。</p>
+</blockquote>
+<h3 id="proc-interrupts"><a href="#proc-interrupts" class="headerlink" title="/proc/interrupts"></a>/proc/interrupts</h3><p>正在使用的中断和曾经有多少个中断</p>
+<h3 id="proc-ioports"><a href="#proc-ioports" class="headerlink" title="/proc/ioports"></a>/proc/ioports</h3><p>当前正在使用的I/O端口</p>
+<h3 id="etc-init-d"><a href="#etc-init-d" class="headerlink" title="/etc/init.d"></a>/etc/init.d</h3><p>这个目录是用来存放系统或服务器以System V模式启动的脚本，这在以System V模式启动或初始化的系统中常见。比如RedHat Fedora</p>
 ]]></content>
     
     <summary type="html">
