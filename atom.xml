@@ -67,7 +67,7 @@
     <link href="http://yoursite.com/2017/01/17/Linux-Directory/"/>
     <id>http://yoursite.com/2017/01/17/Linux-Directory/</id>
     <published>2017-01-17T13:34:29.000Z</published>
-    <updated>2017-01-20T02:29:02.819Z</updated>
+    <updated>2017-01-20T03:05:31.200Z</updated>
     
     <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Linux系统常用目录结构</excert></p>
 <ul>
@@ -121,6 +121,20 @@
 <h3 id="proc-interrupts"><a href="#proc-interrupts" class="headerlink" title="/proc/interrupts"></a>/proc/interrupts</h3><p>正在使用的中断和曾经有多少个中断</p>
 <h3 id="proc-ioports"><a href="#proc-ioports" class="headerlink" title="/proc/ioports"></a>/proc/ioports</h3><p>当前正在使用的I/O端口</p>
 <h3 id="etc-init-d"><a href="#etc-init-d" class="headerlink" title="/etc/init.d"></a>/etc/init.d</h3><p>这个目录是用来存放系统或服务器以System V模式启动的脚本，这在以System V模式启动或初始化的系统中常见。比如RedHat Fedora</p>
+<h3 id="etc-xinetd-d"><a href="#etc-xinetd-d" class="headerlink" title="/etc/xinetd.d"></a>/etc/xinetd.d</h3><p>如果服务器是通过xinetd模式运行的，它的脚本要放在这个目录下。有些系统没有这个目录，比如Slackware,有些老的版本也没有。在RedHat Fedora中比较新的版本中存在。</p>
+<h3 id="etc-rc-d"><a href="#etc-rc-d" class="headerlink" title="/etc/rc.d"></a>/etc/rc.d</h3><p>这个是Slackware发行版中的一个目录，是BSD方式启动脚本的存放地，比如定义网卡，服务器开启脚本等。</p>
+<h3 id="etc-Xll"><a href="#etc-Xll" class="headerlink" title="/etc/Xll"></a>/etc/Xll</h3><p>是X-Window相关的配置文件存放地</p>
+<h3 id="usr-local"><a href="#usr-local" class="headerlink" title="/usr/local"></a>/usr/local</h3><p>这个目录一般是用来存放用户自编译安装软件的存放目录。一般是通过源码包安装的软件，如果没有特别指定安装目录的话，一般是安装在这个目录中。</p>
+<h3 id="usr-lib"><a href="#usr-lib" class="headerlink" title="/usr/lib"></a>/usr/lib</h3><p>该目录和/lib目录相似，是库文件的存储目录。存放一些常用的共享库。</p>
+<h3 id="usr-share"><a href="#usr-share" class="headerlink" title="/usr/share"></a>/usr/share</h3><p>该目录用于存放系统共用的东西，比如/usr/share/fonts是字体目录，是用户都共用的。</p>
+<h3 id="usr-share-doc"><a href="#usr-share-doc" class="headerlink" title="/usr/share/doc"></a>/usr/share/doc</h3><p>该目录是Linux共享文档的存放地。</p>
+<h3 id="usr-share-man"><a href="#usr-share-man" class="headerlink" title="/usr/share/man"></a>/usr/share/man</h3><p>该目录是共享的帮助文件的存放地。</p>
+<h3 id="var-adm"><a href="#var-adm" class="headerlink" title="/var/adm"></a>/var/adm</h3><p>比如软件包安装信息、日志、管理信息等就存放在该目录下，在Slackware操作系统中是有这个目录的。在Fedora中好象没有。</p>
+<h3 id="var-log"><a href="#var-log" class="headerlink" title="/var/log"></a>/var/log</h3><p>该目录用于存放系统日志。</p>
+<h3 id="var-spool"><a href="#var-spool" class="headerlink" title="/var/spool"></a>/var/spool</h3><p>打印机、邮件、代理服务器等假脱机目录存放在该目录下。</p>
+<blockquote>
+<p>本文出自 “蜗牛” 博客，请务必保留此出处<a href="http://ctohf.blog.51cto.com/4059147/907442" target="_blank" rel="external">http://ctohf.blog.51cto.com/4059147/907442</a></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
