@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/01/20/Linux-crontab/</loc>
+    
+    <lastmod>2017-01-20T09:20:13.541Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/01/20/Hexo-image/</loc>
+    
+    <lastmod>2017-01-20T07:43:59.655Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/01/17/Linux-Directory/</loc>
     
     <lastmod>2017-01-20T03:05:31.200Z</lastmod>
