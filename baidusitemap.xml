@@ -4,37 +4,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/01/20/Linux-crontab/</loc>
-    <lastmod>2017-01-20T09:20:13.541Z</lastmod>
-    <data>
-        <display>
-        <title>Linux-crontab</title>
-        <pubTime>2017-01-20T06:54:44.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>crontab</tag>
-         
-        <tag>定时任务</tag>
-         
-        <tag>计划任务</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/01/20/Hexo-image/</loc>
-    <lastmod>2017-01-20T07:43:59.655Z</lastmod>
+    <lastmod>2017-01-22T02:53:47.835Z</lastmod>
     <data>
         <display>
-        <title>Hexo-image</title>
+        <title>Hexo图片处理插件</title>
         <pubTime>2017-01-20T06:56:08.000Z</pubTime>
         
         <tag>hexo</tag>
@@ -56,8 +30,34 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/01/20/Linux-crontab/</loc>
+    <lastmod>2017-01-22T02:48:00.248Z</lastmod>
+    <data>
+        <display>
+        <title>Linux计划任务crontab</title>
+        <pubTime>2017-01-20T06:54:44.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>crontab</tag>
+         
+        <tag>定时任务</tag>
+         
+        <tag>计划任务</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/01/17/Linux-Directory/</loc>
-    <lastmod>2017-01-20T03:05:31.200Z</lastmod>
+    <lastmod>2017-01-22T02:47:33.772Z</lastmod>
     <data>
         <display>
         <title>Linux常用目录结构</title>
@@ -76,11 +76,37 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/01/20/System-V/</loc>
-    <lastmod>2017-01-20T02:56:26.407Z</lastmod>
+    <loc>http://yoursite.com/2017/01/16/CentOSSunJDK/</loc>
+    <lastmod>2017-01-22T02:47:18.443Z</lastmod>
     <data>
         <display>
-        <title>System-V</title>
+        <title>CentOS7系统卸载自带的OpenJDK并安装SUNJDK</title>
+        <pubTime>2017-01-16T13:37:16.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>CentOS7</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>jdk</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/01/20/System-V/</loc>
+    <lastmod>2017-01-22T02:47:04.225Z</lastmod>
+    <data>
+        <display>
+        <title>Linux系统启动方式System-V</title>
         <pubTime>2017-01-20T02:02:37.000Z</pubTime>
         
         <tag>Linux</tag>
@@ -100,25 +126,25 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/01/16/CentOSSunJDK/</loc>
-    <lastmod>2017-01-17T13:26:24.475Z</lastmod>
+    <loc>http://yoursite.com/2017/01/22/vmdk-compress/</loc>
+    <lastmod>2017-01-22T02:45:02.820Z</lastmod>
     <data>
         <display>
-        <title>CentOS_SunJDK</title>
-        <pubTime>2017-01-16T13:37:16.000Z</pubTime>
+        <title>虚拟机体积压缩</title>
+        <pubTime>2017-01-22T01:39:11.000Z</pubTime>
         
-        <tag>Linux</tag>
+        <tag>vmdk</tag>
          
-        <tag>CentOS7</tag>
+        <tag>VirtualBox</tag>
          
-        <tag>Java</tag>
+        <tag>VMWare</tag>
          
-        <tag>jdk</tag>
+        <tag>虚拟机</tag>
          
          
            
              
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+              <breadCrumb title="VirtualMachine" url="http://yoursite.com/categories/VirtualMachine/"/>
           
         </display>
     </data>
