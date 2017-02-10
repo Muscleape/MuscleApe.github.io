@@ -4,6 +4,72 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/02/07/java-interview/</loc>
+    <lastmod>2017-02-07T09:07:14.684Z</lastmod>
+    <data>
+        <display>
+        <title>java全集（上）</title>
+        <pubTime>2017-02-07T07:14:35.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/01/22/Linux-Samba/</loc>
+    <lastmod>2017-02-06T02:36:12.092Z</lastmod>
+    <data>
+        <display>
+        <title>Linux与Windows资源共享服务Samba</title>
+        <pubTime>2017-01-22T03:02:14.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Samba</tag>
+         
+        <tag>共享</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/01/23/Linux-SeLinux/</loc>
+    <lastmod>2017-01-23T06:17:10.400Z</lastmod>
+    <data>
+        <display>
+        <title>SeLinux</title>
+        <pubTime>2017-01-23T01:56:56.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>SeLinux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/01/20/Hexo-image/</loc>
     <lastmod>2017-01-22T02:53:47.835Z</lastmod>
     <data>
@@ -152,26 +218,6 @@
 
     
     
-    
-  <url>
-    <loc>http://yoursite.com/2017/01/15/WhyWriteBlog/</loc>
-    <lastmod>2017-01-15T04:59:16.496Z</lastmod>
-    <data>
-        <display>
-        <title>为啥要整博客这玩意了呢？</title>
-        <pubTime>2017-01-15T03:34:00.000Z</pubTime>
-        
-        <tag>开始</tag>
-         
-         
-           
-             
-              <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://yoursite.com/2017/01/13/hello-world/</loc>
