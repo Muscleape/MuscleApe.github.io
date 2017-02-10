@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-07T09:07:14.684Z</updated>
+  <updated>2017-02-10T02:21:39.103Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>java全集（上）</title>
+    <title>java面试题</title>
     <link href="http://yoursite.com/2017/02/07/java-interview/"/>
     <id>http://yoursite.com/2017/02/07/java-interview/</id>
     <published>2017-02-07T07:14:35.000Z</published>
-    <updated>2017-02-07T09:07:14.684Z</updated>
+    <updated>2017-02-10T02:21:39.103Z</updated>
     
-    <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Java面试题全集（上）<br><a id="more"></a></excert></p>
+    <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>Java面试题<br><a id="more"></a></excert></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
 <h3 id="1、面向对象的特征有哪些方面？"><a href="#1、面向对象的特征有哪些方面？" class="headerlink" title="1、面向对象的特征有哪些方面？"></a>1、面向对象的特征有哪些方面？</h3><p>答：面向对象的特征主要有以下几个方面： </p>
@@ -110,46 +110,62 @@
 <h3 id="12、用最有效率的方法计算2乘以8？"><a href="#12、用最有效率的方法计算2乘以8？" class="headerlink" title="12、用最有效率的方法计算2乘以8？"></a>12、用最有效率的方法计算2乘以8？</h3><p>答： 2 &lt;&lt; 3（左移3位相当于乘以2的3次方，右移3位相当于除以2的3次方）。</p>
 <p>补充：我们为编写的类重写hashCode方法时，可能会看到如下所示的代码，其实我们不太理解为什么要使用这样的乘法运算来产生哈希码（散列码），而且为什么这个数是个素数，为什么通常选择31这个数？前两个问题的答案你可以自己百度一下，选择31是因为可以用移位和减法运算来代替乘法，从而得到更好的性能。说到这里你可能已经想到了：31 * num 等价于(num &lt;&lt; 5) - num，左移5位相当于乘以2的5次方再减去自身就相当于乘以31，现在的VM都能自动完成这个优化。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PhoneNumber</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> areaCode;</div><div class="line">    <span class="keyword">private</span> String prefix;</div><div class="line">    <span class="keyword">private</span> String lineNumber;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</div><div class="line">        <span class="keyword">int</span> result = <span class="number">1</span>;</div><div class="line">        result = prime * result + areaCode;</div><div class="line">        result = prime * result</div><div class="line">                + ((lineNumber == <span class="keyword">null</span>) ? <span class="number">0</span> : lineNumber.hashCode());</div><div class="line">        result = prime * result + ((prefix == <span class="keyword">null</span>) ? <span class="number">0</span> : prefix.hashCode());</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == obj)</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">if</span> (obj == <span class="keyword">null</span>)</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (getClass() != obj.getClass())</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        PhoneNumber other = (PhoneNumber) obj;</div><div class="line">        <span class="keyword">if</span> (areaCode != other.areaCode)</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (lineNumber == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (other.lineNumber != <span class="keyword">null</span>)</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!lineNumber.equals(other.lineNumber))</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (prefix == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (other.prefix != <span class="keyword">null</span>)</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!prefix.equals(other.prefix))</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>13、数组有没有length()方法？String有没有length()方法？<br>答：数组没有length()方法，有length 的属性。String 有length()方法。JavaScript中，获得字符串的长度是通过length属性得到的，这一点容易和Java混淆。</p>
-<p>14、在Java中，如何跳出当前的多重嵌套循环？<br>答：在最外层循环前加一个标记如A，然后用break A;可以跳出多重循环。（Java中支持带标签的break和continue语句，作用有点类似于C和C++中的goto语句，但是就像要避免使用goto一样，应该避免使用带标签的break和continue，因为它不会让你的程序变得更优雅，很多时候甚至有相反的作用，所以这种语法其实不知道更好）</p>
-<p>15、构造器（constructor）是否可被重写（override）？<br>答：构造器不能被继承，因此不能被重写，但可以被重载。</p>
-<p>16、两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，这句话对不对？<br>答：不对，如果两个对象x和y满足x.equals(y) == true，它们的哈希码（hash code）应当相同。Java对于eqauls方法和hashCode方法是这样规定的：(1)如果两个对象相同（equals方法返回true），那么它们的hashCode值一定要相同；(2)如果两个对象的hashCode相同，它们并不一定相同。当然，你未必要按照要求去做，但是如果你违背了上述原则就会发现在使用容器时，相同的对象可以出现在Set集合中，同时增加新元素的效率会大大下降（对于使用哈希存储的系统，如果哈希码频繁的冲突将会造成存取性能急剧下降）。</p>
-<p>补充：关于equals和hashCode方法，很多Java程序都知道，但很多人也就是仅仅知道而已，在Joshua Bloch的大作《Effective Java》（很多软件公司，《Effective Java》、《Java编程思想》以及《重构：改善既有代码质量》是Java程序员必看书籍，如果你还没看过，那就赶紧去亚马逊买一本吧）中是这样介绍equals方法的：首先equals方法必须满足自反性（x.equals(x)必须返回true）、对称性（x.equals(y)返回true时，y.equals(x)也必须返回true）、传递性（x.equals(y)和y.equals(z)都返回true时，x.equals(z)也必须返回true）和一致性（当x和y引用的对象信息没有被修改时，多次调用x.equals(y)应该得到同样的返回值），而且对于任何非null值的引用x，x.equals(null)必须返回false。实现高质量的equals方法的诀窍包括：1. 使用==操作符检查”参数是否为这个对象的引用”；2. 使用instanceof操作符检查”参数是否为正确的类型”；3. 对于类中的关键属性，检查参数传入对象的属性是否与之相匹配；4. 编写完equals方法后，问自己它是否满足对称性、传递性、一致性；5. 重写equals时总是要重写hashCode；6. 不要将equals方法参数中的Object对象替换为其他的类型，在重写时不要忘掉@Override注解。<br>17、是否可以继承String类？<br>答：String 类是final类，不可以被继承。</p>
-<p>补充：继承String本身就是一个错误的行为，对String类型最好的重用方式是关联关系（Has-A）和依赖关系（Use-A）而不是继承关系（Is-A）。<br>18、当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递？<br>答：是值传递。Java语言的方法调用只支持参数的值传递。当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。对象的属性可以在被调用过程中被改变，但对对象引用的改变是不会影响到调用者的。C++和C#中可以通过传引用或传输出参数来改变传入的参数的值。在C#中可以编写如下所示的代码，但是在Java中却做不到。</p>
-<p>using System;</p>
-<p>namespace CS01 {</p>
-<pre><code>class Program {
-    public static void swap(ref int x, ref int y) {
-        int temp = x;
-        x = y;
-        y = temp;
-    }
-
-    public static void Main (string[] args) {
-        int a = 5, b = 10;
-        swap (ref a, ref b);
-        // a = 10, b = 5;
-        Console.WriteLine (&quot;a = {0}, b = {1}&quot;, a, b);
-    }
-}
-</code></pre><p>}<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>说明：Java中没有传引用实在是非常的不方便，这一点在Java 8中仍然没有得到改进，正是如此在Java编写的代码中才会出现大量的Wrapper类（将需要通过方法调用修改的引用置于一个Wrapper类中，再将Wrapper对象传入方法），这样的做法只会让代码变得臃肿，尤其是让从C和C++转型为Java程序员的开发者无法容忍。<br>19、String和StringBuilder、StringBuffer的区别？<br>答：Java平台提供了两种类型的字符串：String和StringBuffer/StringBuilder，它们可以储存和操作字符串。其中String是只读字符串，也就意味着String引用的字符串内容是不能被改变的。而StringBuffer/StringBuilder类表示的字符串对象可以直接进行修改。StringBuilder是Java 5中引入的，它和StringBuffer的方法完全相同，区别在于它是在单线程环境下使用的，因为它的所有方面都没有被synchronized修饰，因此它的效率也比StringBuffer要高。</p>
+<h3 id="13、数组有没有length-方法？String有没有length-方法？"><a href="#13、数组有没有length-方法？String有没有length-方法？" class="headerlink" title="13、数组有没有length()方法？String有没有length()方法？"></a>13、数组有没有length()方法？String有没有length()方法？</h3><p>答：数组没有length()方法，有length 的属性。String 有length()方法。JavaScript中，获得字符串的长度是通过length属性得到的，这一点容易和Java混淆。</p>
+<h3 id="14、在Java中，如何跳出当前的多重嵌套循环？"><a href="#14、在Java中，如何跳出当前的多重嵌套循环？" class="headerlink" title="14、在Java中，如何跳出当前的多重嵌套循环？"></a>14、在Java中，如何跳出当前的多重嵌套循环？</h3><p>答：在最外层循环前加一个标记如A，然后用break A;可以跳出多重循环。（Java中支持带标签的break和continue语句，作用有点类似于C和C++中的goto语句，但是就像要避免使用goto一样，应该避免使用带标签的break和continue，因为它不会让你的程序变得更优雅，很多时候甚至有相反的作用，所以这种语法其实不知道更好）</p>
+<h3 id="15、构造器（constructor）是否可被重写（override）？"><a href="#15、构造器（constructor）是否可被重写（override）？" class="headerlink" title="15、构造器（constructor）是否可被重写（override）？"></a>15、构造器（constructor）是否可被重写（override）？</h3><p>答：构造器不能被继承，因此不能被重写，但可以被重载。</p>
+<h3 id="16、两个对象值相同-x-equals-y-true-，但却可有不同的hash-code，这句话对不对？"><a href="#16、两个对象值相同-x-equals-y-true-，但却可有不同的hash-code，这句话对不对？" class="headerlink" title="16、两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，这句话对不对？"></a>16、两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，这句话对不对？</h3><p>答：不对，如果两个对象x和y满足x.equals(y) == true，它们的哈希码（hash code）应当相同。Java对于eqauls方法和hashCode方法是这样规定的：(1)如果两个对象相同（equals方法返回true），那么它们的hashCode值一定要相同；(2)如果两个对象的hashCode相同，它们并不一定相同。当然，你未必要按照要求去做，但是如果你违背了上述原则就会发现在使用容器时，相同的对象可以出现在Set集合中，同时增加新元素的效率会大大下降（对于使用哈希存储的系统，如果哈希码频繁的冲突将会造成存取性能急剧下降）。</p>
+<p>补充：关于equals和hashCode方法，很多Java程序都知道，但很多人也就是仅仅知道而已，在Joshua Bloch的大作《Effective Java》（很多软件公司，《Effective Java》、《Java编程思想》以及《重构：改善既有代码质量》是Java程序员必看书籍，如果你还没看过，那就赶紧去亚马逊买一本吧）中是这样介绍equals方法的：首先equals方法必须满足自反性（x.equals(x)必须返回true）、对称性（x.equals(y)返回true时，y.equals(x)也必须返回true）、传递性（x.equals(y)和y.equals(z)都返回true时，x.equals(z)也必须返回true）和一致性（当x和y引用的对象信息没有被修改时，多次调用x.equals(y)应该得到同样的返回值），而且对于任何非null值的引用x，x.equals(null)必须返回false。<br>实现高质量的equals方法的诀窍包括：</p>
+<ul>
+<li><ol>
+<li>使用==操作符检查”参数是否为这个对象的引用”；</li>
+</ol>
+</li>
+<li><ol>
+<li>使用instanceof操作符检查”参数是否为正确的类型”；</li>
+</ol>
+</li>
+<li><ol>
+<li>对于类中的关键属性，检查参数传入对象的属性是否与之相匹配；</li>
+</ol>
+</li>
+<li><ol>
+<li>编写完equals方法后，问自己它是否满足对称性、传递性、一致性；</li>
+</ol>
+</li>
+<li><ol>
+<li>重写equals时总是要重写hashCode；</li>
+</ol>
+</li>
+<li><ol>
+<li>不要将equals方法参数中的Object对象替换为其他的类型，在重写时不要忘掉@Override注解。</li>
+</ol>
+</li>
+</ul>
+<h3 id="17、是否可以继承String类？"><a href="#17、是否可以继承String类？" class="headerlink" title="17、是否可以继承String类？"></a>17、是否可以继承String类？</h3><p>答：String 类是final类，不可以被继承。</p>
+<p>补充：继承String本身就是一个错误的行为，对String类型最好的重用方式是关联关系（Has-A）和依赖关系（Use-A）而不是继承关系（Is-A）。</p>
+<h3 id="18、当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递？"><a href="#18、当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递？" class="headerlink" title="18、当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递？"></a>18、当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递？</h3><p>答：是值传递。Java语言的方法调用只支持参数的值传递。当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。对象的属性可以在被调用过程中被改变，但对对象引用的改变是不会影响到调用者的。C++和C#中可以通过传引用或传输出参数来改变传入的参数的值。在C#中可以编写如下所示的代码，但是在Java中却做不到。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line"></div><div class="line">namespace CS01 &#123;</div><div class="line"></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Program</span> </span>&#123;</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(ref <span class="keyword">int</span> x, ref <span class="keyword">int</span> y)</span> </span>&#123;</div><div class="line">            <span class="keyword">int</span> temp = x;</div><div class="line">            x = y;</div><div class="line">            y = temp;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span> <span class="params">(string[] args)</span> </span>&#123;</div><div class="line">            <span class="keyword">int</span> a = <span class="number">5</span>, b = <span class="number">10</span>;</div><div class="line">            swap (ref a, ref b);</div><div class="line">            <span class="comment">// a = 10, b = 5;</span></div><div class="line">            Console.WriteLine (<span class="string">"a = &#123;0&#125;, b = &#123;1&#125;"</span>, a, b);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>说明：Java中没有传引用实在是非常的不方便，这一点在Java 8中仍然没有得到改进，正是如此在Java编写的代码中才会出现大量的Wrapper类（将需要通过方法调用修改的引用置于一个Wrapper类中，再将Wrapper对象传入方法），这样的做法只会让代码变得臃肿，尤其是让从C和C++转型为Java程序员的开发者无法容忍。</p>
+<h3 id="19、String和StringBuilder、StringBuffer的区别？"><a href="#19、String和StringBuilder、StringBuffer的区别？" class="headerlink" title="19、String和StringBuilder、StringBuffer的区别？"></a>19、String和StringBuilder、StringBuffer的区别？</h3><p>答：Java平台提供了两种类型的字符串：String和StringBuffer/StringBuilder，它们可以储存和操作字符串。其中String是只读字符串，也就意味着String引用的字符串内容是不能被改变的。而StringBuffer/StringBuilder类表示的字符串对象可以直接进行修改。StringBuilder是Java 5中引入的，它和StringBuffer的方法完全相同，区别在于它是在单线程环境下使用的，因为它的所有方面都没有被synchronized修饰，因此它的效率也比StringBuffer要高。</p>
 <p>面试题1 - 什么情况下用+运算符进行字符串连接比调用StringBuffer/StringBuilder对象的append方法连接字符串性能更好？</p>
-<p>面试题2 - 请说出下面程序的输出。<br>class StringEqualTest {</p>
-<pre><code>public static void main(String[] args) {
-    String s1 = &quot;Programming&quot;;
-    String s2 = new String(&quot;Programming&quot;);
-    String s3 = &quot;Program&quot;;
-    String s4 = &quot;ming&quot;;
-    String s5 = &quot;Program&quot; + &quot;ming&quot;;
-    String s6 = s3 + s4;
-    System.out.println(s1 == s2);
-    System.out.println(s1 == s5);
-    System.out.println(s1 == s6);
-    System.out.println(s1 == s6.intern());
-    System.out.println(s2 == s2.intern());
-}
-</code></pre><p>}<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>补充：解答上面的面试题需要清除两点：1. String对象的intern方法会得到字符串对象在常量池中对应的版本的引用（如果常量池中有一个字符串与String对象的equals结果是true），如果常量池中没有对应的字符串，则该字符串将被添加到常量池中，然后返回常量池中字符串的引用；2. 字符串的+操作其本质是创建了StringBuilder对象进行append操作，然后将拼接后的StringBuilder对象用toString方法处理成String对象，这一点可以用javap -c StringEqualTest.class命令获得class文件对应的JVM字节码指令就可以看出来。<br>20、重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？<br>答：方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的返回类型，比父类被重写方法更好访问，不能比父类被重写方法声明更多的异常（里氏代换原则）。重载对返回类型没有特殊的要求。</p>
-<p>面试题：华为的面试题中曾经问过这样一个问题 - “为什么不能根据返回类型来区分重载”，快说出你的答案吧！<br>21、描述一下JVM加载class文件的原理机制？<br>答：JVM中类的装载是由类加载器（ClassLoader）和它的子类来实现的，Java中的类加载器是一个重要的Java运行时系统组件，它负责在运行时查找和装入类文件中的类。<br>由于Java的跨平台性，经过编译的Java源程序并不是一个可执行程序，而是一个或多个类文件。当Java程序需要使用某个类时，JVM会确保这个类已经被加载、连接（验证、准备和解析）和初始化。类的加载是指把类的.class文件中的数据读入到内存中，通常是创建一个字节数组读入.class文件，然后产生与所加载类对应的Class对象。加载完成后，Class对象还不完整，所以此时的类还不可用。当类被加载后就进入连接阶段，这一阶段包括验证、准备（为静态变量分配内存并设置默认的初始值）和解析（将符号引用替换为直接引用）三个步骤。最后JVM对类进行初始化，包括：1)如果类存在直接的父类并且这个类还没有被初始化，那么就先初始化父类；2)如果类中存在初始化语句，就依次执行这些初始化语句。<br>类的加载是由类加载器完成的，类加载器包括：根加载器（BootStrap）、扩展加载器（Extension）、系统加载器（System）和用户自定义类加载器（java.lang.ClassLoader的子类）。从Java 2（JDK 1.2）开始，类加载过程采取了父亲委托机制（PDM）。PDM更好的保证了Java平台的安全性，在该机制中，JVM自带的Bootstrap是根加载器，其他的加载器都有且仅有一个父类加载器。类的加载首先请求父类加载器加载，父类加载器无能为力时才由其子类加载器自行加载。JVM不会向Java程序提供对Bootstrap的引用。下面是关于几个类加载器的说明：</p>
+<p>面试题2 - 请说出下面程序的输出。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">StringEqualTest</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        String s1 = <span class="string">"Programming"</span>;</div><div class="line">        String s2 = <span class="keyword">new</span> String(<span class="string">"Programming"</span>);</div><div class="line">        String s3 = <span class="string">"Program"</span>;</div><div class="line">        String s4 = <span class="string">"ming"</span>;</div><div class="line">        String s5 = <span class="string">"Program"</span> + <span class="string">"ming"</span>;</div><div class="line">        String s6 = s3 + s4;</div><div class="line">        System.out.println(s1 == s2);</div><div class="line">        System.out.println(s1 == s5);</div><div class="line">        System.out.println(s1 == s6);</div><div class="line">        System.out.println(s1 == s6.intern());</div><div class="line">        System.out.println(s2 == s2.intern());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>补充：解答上面的面试题需要清除两点：</p>
+<ul>
+<li><ol>
+<li>String对象的intern方法会得到字符串对象在常量池中对应的版本的引用（如果常量池中有一个字符串与String对象的equals结果是true），如果常量池中没有对应的字符串，则该字符串将被添加到常量池中，然后返回常量池中字符串的引用；</li>
+</ol>
+</li>
+<li><ol>
+<li>字符串的+操作其本质是创建了StringBuilder对象进行append操作，然后将拼接后的StringBuilder对象用toString方法处理成String对象，这一点可以用javap -c StringEqualTest.class命令获得class文件对应的JVM字节码指令就可以看出来。</li>
+</ol>
+</li>
+<li><h3 id="20、重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？"><a href="#20、重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？" class="headerlink" title="20、重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？"></a>20、重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？</h3></li>
+</ul>
+<p>答：方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的返回类型，比父类被重写方法更好访问，不能比父类被重写方法声明更多的异常（里氏代换原则）。重载对返回类型没有特殊的要求。</p>
+<blockquote>
+<p>面试题：华为的面试题中曾经问过这样一个问题 - “为什么不能根据返回类型来区分重载”，快说出你的答案吧！</p>
+</blockquote>
+<p>21、描述一下JVM加载class文件的原理机制？<br>答：JVM中类的装载是由类加载器（ClassLoader）和它的子类来实现的，Java中的类加载器是一个重要的Java运行时系统组件，它负责在运行时查找和装入类文件中的类。<br>由于Java的跨平台性，经过编译的Java源程序并不是一个可执行程序，而是一个或多个类文件。当Java程序需要使用某个类时，JVM会确保这个类已经被加载、连接（验证、准备和解析）和初始化。类的加载是指把类的.class文件中的数据读入到内存中，通常是创建一个字节数组读入.class文件，然后产生与所加载类对应的Class对象。加载完成后，Class对象还不完整，所以此时的类还不可用。当类被加载后就进入连接阶段，这一阶段包括验证、准备（为静态变量分配内存并设置默认的初始值）和解析（将符号引用替换为直接引用）三个步骤。最后JVM对类进行初始化，包括：1)如果类存在直接的父类并且这个类还没有被初始化，那么就先初始化父类；2)如果类中存在初始化语句，就依次执行这些初始化语句。<br>类的加载是由类加载器完成的，类加载器包括：根加载器（BootStrap）、扩展加载器（Extension）、系统加载器（System）和用户自定义类加载器（java.lang.ClassLoader的子类）。从Java 2（JDK 1.2）开始，类加载过程采取了父亲委托机制（PDM）。PDM更好的保证了Java平台的安全性，在该机制中，JVM自带的Bootstrap是根加载器，其他的加载器都有且仅有一个父类加载器。类的加载首先请求父类加载器加载，父类加载器无能为力时才由其子类加载器自行加载。JVM不会向Java程序提供对Bootstrap的引用。下面是关于几个类加载器的说明：</p>
 <p>Bootstrap：一般用本地代码实现，负责加载JVM基础核心类库（rt.jar）；<br>Extension：从java.ext.dirs系统属性所指定的目录中加载类库，它的父加载器是Bootstrap；<br>System：又叫应用类加载器，其父类是Extension。它是应用最广泛的类加载器。它从环境变量classpath或者系统属性java.class.path所指定的目录中记载类，是用户自定义加载器的默认父加载器。<br>22、char 型变量中能不能存贮一个中文汉字，为什么？<br>答：char类型可以存储一个中文汉字，因为Java中使用的编码是Unicode（不选择任何特定的编码，直接使用字符在字符集中的编号，这是统一的唯一方法），一个char类型占2个字节（16比特），所以放一个中文是没问题的。</p>
 <p>补充：使用Unicode意味着字符在JVM内部和外部有不同的表现形式，在JVM内部都是Unicode，当这个字符被从JVM内部转移到外部时（例如存入文件系统中），需要进行编码转换。所以Java中有字节流和字符流，以及在字符流和字节流之间进行转换的转换流，如InputStreamReader和OutputStreamReader，这两个类是字节流和字符流之间的适配器类，承担了编码转换的任务；对于C程序员来说，要完成这样的编码转换恐怕要依赖于union（联合体/共用体）共享内存的特征来实现了。<br>23、抽象类（abstract class）和接口（interface）有什么异同？<br>答：抽象类和接口都不能够实例化，但可以定义抽象类和接口类型的引用。一个类如果继承了某个抽象类或者实现了某个接口都需要对其中的抽象方法全部进行实现，否则该类仍然需要被声明为抽象类。接口比抽象类更加抽象，因为抽象类中可以定义构造器，可以有抽象方法和具体方法，而接口中不能定义构造器而且其中的方法全部都是抽象方法。抽象类中的成员可以是private、默认、protected、public的，而接口中的成员全都是public的。抽象类中可以定义成员变量，而接口中定义的成员变量实际上都是常量。有抽象方法的类必须被声明为抽象类，而抽象类未必要有抽象方法。</p>
 <p>24、静态嵌套类(Static Nested Class)和内部类（Inner Class）的不同？<br>答：Static Nested Class是被声明为静态（static）的内部类，它可以不依赖于外部类实例被实例化。而通常的内部类需要在外部类实例化后才能实例化，其语法看起来挺诡异的，如下所示。</p>
@@ -1251,7 +1267,7 @@ for (int i = 1, len = list.length; i &lt; len &amp;&amp; swapped; ++i) {
     
     <summary type="html">
     
-      &lt;p&gt;&lt;Excert in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;Java面试题全集（上）&lt;br&gt;&lt;/Excert&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;Excert in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;Java面试题&lt;br&gt;&lt;/Excert&gt;&lt;/p&gt;
     
     </summary>
     
@@ -1697,6 +1713,48 @@ for (int i = 1, len = list.length; i &lt; len &amp;&amp; swapped; ++i) {
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="jdk" scheme="http://yoursite.com/tags/jdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为啥要整博客这玩意了呢？</title>
+    <link href="http://yoursite.com/2017/01/15/WhyWriteBlog/"/>
+    <id>http://yoursite.com/2017/01/15/WhyWriteBlog/</id>
+    <published>2017-01-15T03:34:00.000Z</published>
+    <updated>2017-02-10T02:22:46.285Z</updated>
+    
+    <content type="html"><![CDATA[<p><excert in="" index="" |="" 主页摘要=""></excert></p>
+<blockquote>
+<p>为嘛搞这个博客</p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>这里引用一篇文章 <a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat" title="为什么你要写博客" target="_blank" rel="external">《为什么你要写博客》</a></the></li>
+</ul>
+</blockquote>
+<ul>
+<li>折腾</li>
+<li>笔记</li>
+<li>MarkDown</li>
+</ul>
+<blockquote>
+<p>再有嘛，也是终极目的，就是……( ͡° ͜ʖ ͡°)</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excert in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 主页摘要=&quot;&quot;&gt;&lt;/Excert&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为嘛搞这个博客&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="other" scheme="http://yoursite.com/categories/other/"/>
+    
+    
+      <category term="开始" scheme="http://yoursite.com/tags/%E5%BC%80%E5%A7%8B/"/>
     
   </entry>
   
