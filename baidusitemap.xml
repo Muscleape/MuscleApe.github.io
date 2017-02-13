@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/02/07/java-interview/</loc>
+    <lastmod>2017-02-13T11:39:25.476Z</lastmod>
+    <data>
+        <display>
+        <title>java面试题</title>
+        <pubTime>2017-02-07T07:14:35.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/01/15/WhyWriteBlog/</loc>
     <lastmod>2017-02-10T02:22:46.285Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/02/07/java-interview/</loc>
-    <lastmod>2017-02-10T02:21:39.103Z</lastmod>
-    <data>
-        <display>
-        <title>java面试题</title>
-        <pubTime>2017-02-07T07:14:35.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
           
         </display>
     </data>
