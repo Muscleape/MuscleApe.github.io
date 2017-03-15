@@ -4,35 +4,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/03/15/centos7-2-golang/</loc>
-    <lastmod>2017-03-15T13:30:30.174Z</lastmod>
-    <data>
-        <display>
-        <title>centos7-2-golang</title>
-        <pubTime>2017-03-15T07:59:59.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>CentOS7</tag>
-         
-        <tag>GoLang</tag>
-         
-         
-           
-             
-              <breadCrumb title="golang" url="http://yoursite.com/categories/golang/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/03/15/centos7-systeminfo/</loc>
-    <lastmod>2017-03-15T12:44:01.226Z</lastmod>
+    <lastmod>2017-03-15T13:35:16.237Z</lastmod>
     <data>
         <display>
-        <title>centos7-systeminfo</title>
+        <title>centos7查看系统信息命令</title>
         <pubTime>2017-03-15T08:27:36.000Z</pubTime>
         
         <tag>Linux</tag>
@@ -45,6 +21,30 @@
            
              
               <breadCrumb title="linux" url="http://yoursite.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/15/centos7-2-golang/</loc>
+    <lastmod>2017-03-15T13:35:00.945Z</lastmod>
+    <data>
+        <display>
+        <title>centos7部署搭建golang环境</title>
+        <pubTime>2017-03-15T07:59:59.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>CentOS7</tag>
+         
+        <tag>GoLang</tag>
+         
+         
+           
+             
+              <breadCrumb title="golang" url="http://yoursite.com/categories/golang/"/>
           
         </display>
     </data>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-15T12:44:01.226Z</updated>
+  <updated>2017-03-15T13:35:16.237Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>centos7-systeminfo</title>
+    <title>centos7查看系统信息命令</title>
     <link href="http://yoursite.com/2017/03/15/centos7-systeminfo/"/>
     <id>http://yoursite.com/2017/03/15/centos7-systeminfo/</id>
     <published>2017-03-15T08:27:36.000Z</published>
-    <updated>2017-03-15T12:44:01.226Z</updated>
+    <updated>2017-03-15T13:35:16.237Z</updated>
     
     <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>CentOS7查看系统信息<br><a id="more"></a></excert></p>
 <the rest="" of="" contents="" |="" 余下全文="">
@@ -59,11 +59,11 @@
   </entry>
   
   <entry>
-    <title>centos7-2-golang</title>
+    <title>centos7部署搭建golang环境</title>
     <link href="http://yoursite.com/2017/03/15/centos7-2-golang/"/>
     <id>http://yoursite.com/2017/03/15/centos7-2-golang/</id>
     <published>2017-03-15T07:59:59.000Z</published>
-    <updated>2017-03-15T13:30:30.174Z</updated>
+    <updated>2017-03-15T13:35:00.945Z</updated>
     
     <content type="html"><![CDATA[<p><excert in="" index="" |="" 首页摘要=""><br>CentOS7中部署GoLanguage运行环境<br><a id="more"></a></excert></p>
 <the rest="" of="" contents="" |="" 余下全文="">
