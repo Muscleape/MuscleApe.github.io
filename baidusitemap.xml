@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/15/centos7-2-golang/</loc>
+    <lastmod>2017-03-15T13:30:30.174Z</lastmod>
+    <data>
+        <display>
+        <title>centos7-2-golang</title>
+        <pubTime>2017-03-15T07:59:59.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>CentOS7</tag>
+         
+        <tag>GoLang</tag>
+         
+         
+           
+             
+              <breadCrumb title="golang" url="http://yoursite.com/categories/golang/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/15/centos7-systeminfo/</loc>
+    <lastmod>2017-03-15T12:44:01.226Z</lastmod>
+    <data>
+        <display>
+        <title>centos7-systeminfo</title>
+        <pubTime>2017-03-15T08:27:36.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>CentOS7</tag>
+         
+        <tag>系统信息</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://yoursite.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/13/CentOS6-5-MySQL5-6/</loc>
     <lastmod>2017-03-13T04:25:43.977Z</lastmod>
     <data>

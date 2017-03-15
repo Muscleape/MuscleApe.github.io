@@ -15,16 +15,12 @@
 
 
 
-<meta name="description" content="要配置SAMBA服务，结果被SeLinux这玩意给坑了好大一把，这里记录一下SeLinux。其中大部分内容取自《鸟哥的Linux私房菜：基础学习篇》">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SeLinux">
-<meta property="og:url" content="http://yoursite.com/2017/01/23/Linux-SeLinux/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/系统信息/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="要配置SAMBA服务，结果被SeLinux这玩意给坑了好大一把，这里记录一下SeLinux。其中大部分内容取自《鸟哥的Linux私房菜：基础学习篇》">
-<meta property="og:updated_time" content="2017-01-23T06:17:10.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SeLinux">
-<meta name="twitter:description" content="要配置SAMBA服务，结果被SeLinux这玩意给坑了好大一把，这里记录一下SeLinux。其中大部分内容取自《鸟哥的Linux私房菜：基础学习篇》">
+<meta name="twitter:title" content="Hexo">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +52,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>SeLinux | Hexo</title>
+<title>Tag: 系统信息 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,9 +62,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
+        isPost: false,
         isArchive: false,
-        isTag: false,
+        isTag: true,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -259,205 +255,60 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Linux-SeLinux" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2017/01/23/Linux-SeLinux/" class="article-date">
-      <time datetime="2017-01-23T01:56:56.000Z" itemprop="datePublished">2017-01-23</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2017/03/15/centos7-systeminfo/" class="archive-article-date">
+      <time datetime="2017-03-15T08:27:36.000Z" itemprop="datePublished">03-15</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      SeLinux
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/03/15/centos7-systeminfo/">centos7-systeminfo</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SeLinux/">SeLinux</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <p><excert in="" index="" |="" 首页摘要=""><br>要配置SAMBA服务，结果被SeLinux这玩意给坑了好大一把，这里记录一下SeLinux。其中大部分内容取自《鸟哥的Linux私房菜：基础学习篇》<br><a id="more"></a></excert></p>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<p>　　SELinux(Security-Enhanced Linux) 是在内核中实践的强制访问控制（MAC）的安全性机制。</p>
-<p>　　是 Linux历史上最杰出的新安全子系统。NSA是在Linux社区的帮助下开发了一种访问控制体系，在这种访问控制体系的限制下，进程只能访问那些在他的任务中所需要的文件。</p>
-<p>　　从进入了 CentOS 5.x 之后的 CentOS 版本中 （当然包括 CentOS 7），SELinux 已经是个非常完备的核心模块了！尤其 CentOS 提供了很多管理 SELinux 的指令与机制， 因此在整体架构上面是单纯且容易操作管理的！所以，在没有自行开发网络服务软件以及使用其他第三方协力软件的情况下， 也就是全部使用 CentOS 官方提供的软件来使用我们服务器的情况下，建议大家不要关闭 SELinux 了喔！ 让我们来仔细的玩玩这家伙吧！</p>
-<h2 id="什么是SeLinux"><a href="#什么是SeLinux" class="headerlink" title="什么是SeLinux"></a>什么是SeLinux</h2><p>SELinux(Security-Enhanced Linux)，字面撒花姑娘的意义就是安全强化的Linux之意。</p>
-<h3 id="当初设计的目标是：避免资源的误用"><a href="#当初设计的目标是：避免资源的误用" class="headerlink" title="当初设计的目标是：避免资源的误用"></a>当初设计的目标是：避免资源的误用</h3><p>　　当初开发这玩意儿的目的是因为很多企业界发现， 通常系统出现问题的原因大部分都在于“内部员工的资源误用”所导致的，实际由外部发动的攻击反而没有这么严重。 那么什么是“员工资源误用”呢？举例来说，如果有个不是很懂系统的系统管理员为了自己设置的方便，将网页所在目录 /var/www/html/ 的权限设置为drwxrwxrwx 时，你觉得会有什么事情发生？</p>
-<p>　　现在我们知道所有的系统资源都是通过程序来进行存取的，那么 /var/www/html/ 如果设置为777 ，代表所有程序均可对该目录存取，万一你真的有启动 WWW 服务器软件，那么该软件所触发的程序将可以写入该目录， 而该程序却是对整个 Internet 提供服务的！只要有心人接触到这支程序，而且该程序刚好又有提供使用者进行写入的功能， 那么外部的人很可能就会对你的系统写入些莫名其妙的东西！那可真是不得了！一个小小的 777 问题可是大大的！<br>为了控管这方面的权限与程序的问题</p>
-</the>
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/01/23/Linux-SeLinux/">SeLinux</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Muscleape</a></p>
-        <p><span>发布时间:</span>2017-01-23, 09:56:56</p>
-        <p><span>最后更新:</span>2017-01-23, 14:17:10</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/01/23/Linux-SeLinux/" title="SeLinux">http://yoursite.com/2017/01/23/Linux-SeLinux/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/23/Linux-SeLinux/　　作者: Muscleape" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
     </div>
 
 
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/02/07/java-interview/">
-                    java
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/22/Linux-Samba/">
-                    Linux与Windows资源共享服务Samba
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是SeLinux"><span class="toc-number">1.</span> <span class="toc-text">什么是SeLinux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#当初设计的目标是：避免资源的误用"><span class="toc-number">1.1.</span> <span class="toc-text">当初设计的目标是：避免资源的误用</span></a></li></ol></li></ol>
-        
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS7/">CentOS7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/系统信息/">系统信息</a></li></ul>
     </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-6 i,
-        .toc-level-6 ol {
-            display: none !important;
-        }
-    </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"SeLinux　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
-</div>
 
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/23/Linux-SeLinux/" data-title="SeLinux" data-url="http://yoursite.com/2017/01/23/Linux-SeLinux/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"muscleape"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-			/*设置embed.js链接*/
-            /*s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';*/
-			s.src = 'https://muscleape.github.io/js/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/02/07/java-interview/" title="上一篇: java">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/01/22/Linux-Samba/" title="下一篇: Linux与Windows资源共享服务Samba">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/centos7-systeminfo/">centos7-systeminfo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/centos7-2-golang/">centos7-2-golang</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/CentOS6-5-MySQL5-6/">CentOS6.5安装MySQL5.6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/07/java-interview/">java</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/23/Linux-SeLinux/">SeLinux</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/22/Linux-Samba/">Linux与Windows资源共享服务Samba</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/22/vmdk-compress/">虚拟机体积压缩</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/Hexo-image/">Hexo图片处理插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/Linux-crontab/">Linux计划任务crontab</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/System-V/">Linux系统启动方式System-V</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/17/Linux-Directory/">Linux常用目录结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/16/CentOSSunJDK/">CentOS7系统卸载自带的OpenJDK并安装SUNJDK</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/15/WhyWriteBlog/">为啥要整博客这玩意了呢？</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/13/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
