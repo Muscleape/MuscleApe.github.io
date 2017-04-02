@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/01/15/WhyWriteBlog/</loc>
+    <lastmod>2017-04-02T12:20:03.672Z</lastmod>
+    <data>
+        <display>
+        <title>为什么整理博客</title>
+        <pubTime>2017-01-15T03:34:00.000Z</pubTime>
+        
+        <tag>开始</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/15/centos7-2-golang/</loc>
     <lastmod>2017-03-15T13:37:24.283Z</lastmod>
     <data>
@@ -89,26 +109,6 @@
            
              
               <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/01/15/WhyWriteBlog/</loc>
-    <lastmod>2017-02-10T02:22:46.285Z</lastmod>
-    <data>
-        <display>
-        <title>为啥要整博客这玩意了呢？</title>
-        <pubTime>2017-01-15T03:34:00.000Z</pubTime>
-        
-        <tag>开始</tag>
-         
-         
-           
-             
-              <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
           
         </display>
     </data>
@@ -312,12 +312,12 @@
     
     
   <url>
-    <loc>http://yoursite.com/2017/01/13/hello-world/</loc>
+    <loc>http://yoursite.com/2017/04/02/hello-world/</loc>
     <lastmod>2017-01-15T03:52:41.481Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
-        <pubTime>2017-01-13T12:23:49.978Z</pubTime>
+        <pubTime>2017-04-02T12:09:34.946Z</pubTime>
         
          
            
